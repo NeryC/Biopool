@@ -6,11 +6,54 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.customTable{
+  border-collapse: initial;
+  border-spacing: 0 6px;
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: "Gibson";
+  src: url("/fonts/Gibson-Regular.ttf");
+  font-style: normal;
+  font-display: swap;
 }
+@font-face {
+  font-family: "Gibson2";
+  src: url("/fonts/GibsonRegular.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gibson-SemiBold";
+  src: url("/fonts/Gibson-SemiBold.ttf");
+  font-style: semibold;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GibsonSemiBd";
+  src: url("/fonts/GibsonSemiBd.ttf");
+  font-style: semibold;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gibson-Bold";
+  src: url("/fonts/Gibson-Bold.ttf");
+  font-style: bold;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gibson-Bold2";
+  src: url("/fonts/Gibson-bold2.ttf");
+  font-style: bold;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gibson-Light";
+  src: url("/fonts/GibsonLight.ttf");
+  font-style: bold;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

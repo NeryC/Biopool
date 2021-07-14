@@ -1,20 +1,37 @@
 {
-  "name": "bio-pool",
+  "name": "chia-tk",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "slint": "next lint"
   },
   "dependencies": {
-    "next": "11.0.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@types/react": "^17.0.6",
+    "byte-size": "^7.0.1",
+    "jquery": "^3.6.0",
+    "next": "^11.0.1",
+    "no-scroll": "^2.1.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-modal": "^3.14.3",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
+    "typescript": "^4.2.4",
+    "validator": "^13.6.0"
   },
   "devDependencies": {
-    "eslint": "7.29.0",
-    "eslint-config-next": "11.0.1"
+    "autoprefixer": "^10.2.5",
+    "eslint": "^7.30.0",
+    "eslint-config-next": "^11.0.1",
+    "postcss": "^8.2.15",
+    "tailwindcss": "^2.1.2"
   }
 }
