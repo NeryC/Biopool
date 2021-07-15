@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
           <meta name="keywords" content="chianetwork pool chia toolkit chiatk chia toolkit farming farmear chiacoin xch criptomoneda mining mineria"/>
           <title>BioPool</title>
         </Head>
-        <div className="min-h-screen bg-green4">
+        <div className="bg-white text-white font-gibson2 text-xl">
           <Component {...pageProps} />
         </div>
       </GlobalState>

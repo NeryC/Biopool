@@ -1,5 +1,5 @@
 import React from "react";
-import MediaItem from "../components/media_item";
+import MediaItem from "./media_item";
 import {
   faDiscord,
   faInstagram,
@@ -7,7 +7,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
-const Faq = () => {
+const Media = () => {
   return (
     <div className="
       py-20
@@ -62,7 +62,8 @@ const Faq = () => {
               </a>
               <div className="flex col-span-2">
                 <a href="https://play.google.com/store/apps/details?id=com.chiatk.apps.movil" target="_blank" rel="noreferrer">
-                  <img className="w-full" src="/images/playStore.webp" />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img alt="Play Store Logo" className="w-full" src="/images/playStore.webp" />
                 </a>
               </div>
             </div>
@@ -92,4 +93,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default Media;

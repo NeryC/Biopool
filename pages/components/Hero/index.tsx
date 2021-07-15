@@ -1,6 +1,6 @@
-import Tool from "../components/tool";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PoolInfo from "./pool-info";
 
 export const Hero = () => {
   return (
@@ -17,8 +17,8 @@ export const Hero = () => {
         row-span-4
       ">
         <div className="col-span-6 flex flex-col flex-none self-center">
-          <div className="text-black text-4xl font-gibson">
-            <span className="text-lime1 ">
+          <div className="text-black text-4xl">
+            <span className="text-lime1 font-gibson-semiBold2">
               ¡Hola!,&nbsp;
             </span>
             <span>
@@ -53,7 +53,7 @@ export const Hero = () => {
               </a>
               <div className="flex">
                 <a href="https://play.google.com/store/apps/details?id=com.chiatk.apps.movil" target="_blank" rel="noreferrer">
-                  <img className="w-full" src="/images/playStore.webp" />
+                  <img alt="Play Store Logo" className="w-full" src="/images/playStore.webp" />
                 </a>
               </div>
             </div>
@@ -68,8 +68,8 @@ export const Hero = () => {
               </div>
               <span className="text-white font-gibson-semiBold2text-lg mt-2">Chia Network</span>
             </div>
-            <div>
-              <img className="w-14" src="images/ChiaLogo.webp" />
+            <div className="w-14">
+              <img alt="Chia Logo" src="images/ChiaLogo.webp"/>
             </div>
           </div>
           <div className="h-3/5 bg-green3 flex flex-col justify-between p-4">
@@ -107,37 +107,37 @@ export const Hero = () => {
         </div>
       </div>
       <div className="grid grid-cols-4 gap-4">
-        <Tool
+        <PoolInfo
           title="Farmers"
-          imageUrl="/images/items/Farmers.webp"
-          info="Número de farmers registrado"
-        >
-          <span className="text-lime1 ">00.00</span>
-        </Tool>
+          imageUrl="images/items/Farmers.webp"
+          description="Número de farmers registrado"
+          type="data"
+          info="00.00"
+        />
 
-        <Tool
+        <PoolInfo
           title="Pool"
-          imageUrl="/images/items/Pool.webp"
-          info="Espacio total del Pool"
-        >
-          <span className="text-lime1 ">00.00</span>
-        </Tool>
+          imageUrl="images/items/Farmers.webp"
+          description="Espacio total del Pool"
+          type="data"
+          info="00.00"
+        />
 
-        <Tool
+        <PoolInfo
           title="Bloques"
-          imageUrl="/images/items/Bloques.webp"
-          info="Resumen de bloques con recompensa"
-        >
-          <a className="text-lime1 " href="#">Ver más</a>
-        </Tool>
+          imageUrl="images/items/Farmers.webp"
+          description="Resumen de bloques con recompensa"
+          type="ViewMore"
+          info="Ver más"
+        />
 
-        <Tool
+        <PoolInfo
           title="MainNet"
-          imageUrl="/images/items/MainNet.webp"
-          info="Resumen de la red (MainNet) Chia Network"
-        >
-          <a className="text-lime1 " href="#">Ver más</a>
-        </Tool>
+          imageUrl="images/items/Farmers.webp"
+          description="Resumen de la red (MainNet) Chia Network"
+          type="ViewMore"
+          info="Ver más"
+        />
       </div>
     </div>
   );

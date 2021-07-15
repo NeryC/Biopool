@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
-import { Context } from '../context/globalStore';
+import { Context } from '../../context/globalStore';
 import { faList, faChevronDown, faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Blocks from "../utils/Blocks.json";
+import Blocks from "../../data/Blocks.json";
 
-const PoolInfo = () => {
+const BlockTable = () => {
   const {state} = useContext(Context);
 
-  const CardMembers= Blocks.map((block,index) => (
+  const Rows= Blocks.map((block,index) => (
       <tr key={index} className="text-black text-center font-gibson2 font-bold bg-gray h-16">
         <td className="p-3">{block.Block}</td>
         <td>{block.Header}</td>
@@ -58,7 +58,7 @@ const PoolInfo = () => {
                 </tr>
               </thead>
               <tbody className="text-xs tracking-wide">
-                {CardMembers}
+                {Rows}
               </tbody>
             </table>
           </div>
@@ -80,4 +80,4 @@ const PoolInfo = () => {
   );
 };
 
-export default PoolInfo;
+export default BlockTable;

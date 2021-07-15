@@ -1,24 +1,22 @@
 import React from "react";
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { AppBar } from "./sections/app-bar";
-import Copyright from "./sections/copyright";
-import Faq from "./sections/faq";
-import Footer from "./sections/footer";
-import { Hero } from "./sections/hero";
-import PoolInfo from "./sections/pool-info";
-import Subscribe from "./sections/subscribe";
-import BusinessModal from "./components/business-modal";
+import { AppBar } from "./components/App-bar";
+import Faq from "./components/Media";
+import Footer from "./components/Footer";
+import { Hero } from "./components/Hero";
+import PoolInfo from "./components/Block-table";
+import Subscribe from "./components/Promotions";
+import BusinessModal from "./utils/business-modal";
 
 export default function Home(props: any) {
   return (
-    <div id="root" className="mx-auto shadow text-white bg-white text-xl font-gibson  relative">
+    <div id="root" className="mx-auto relative">
       <AppBar />
       <Hero />
       <Subscribe />
       <PoolInfo />
       <Faq />
       <Footer />
-      <Copyright />
       {/* <BusinessModal /> */}
     </div>
   );

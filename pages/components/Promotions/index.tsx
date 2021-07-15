@@ -1,6 +1,6 @@
-import PromotionItem from "../components/promotion_item";
+import PromotionItem from "./promotion_item";
 
-const Subscribe = () => {
+const Promotion = () => {
 
   return (
     <div className="bg-lime1 py-16 bg-promotion-back bg-no-repeat bg-right bg-promotion-size">
@@ -41,4 +41,4 @@ const Subscribe = () => {
   );
 };
 
-export default Subscribe;
+export default Promotion;
