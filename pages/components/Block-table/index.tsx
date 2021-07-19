@@ -9,12 +9,12 @@ const BlockTable = () => {
 
   const Rows= Blocks.map((block,index) => (
       <tr key={index} className="text-black text-center font-gibson2 font-bold bg-gray h-16">
-        <td className="p-3">{block.Block}</td>
-        <td>{block.Header}</td>
-        <td className="text-lime2">{block.Farm}</td>
+        <td className="hidden lg:table-cell">{block.Block}</td>
+        <td className="hidden lg:table-cell text-left">{block.Header}</td>
+        <td className="p-5 lg:p-3 text-lime2 text-left text-xl lg:text-sm pl-2 lg:pl-0">{block.Farm}</td>
         <td>{block.Luck}</td>
         <td>{block.Date}</td>
-        <td>{block.Reward}</td>
+        <td className="hidden lg:table-cell">{block.Reward}</td>
       </tr>
     ));
 
@@ -29,10 +29,10 @@ const BlockTable = () => {
       >
         <div className="flex flex-col">
           <div className="flex justify-between items-center">
-            <div className="text-green3 text-4xl">
+            <div className="text-green3 text-4.5xl lg:text-4xl">
               <span className="font-gibson-semiBold2">Tabla de bloques</span> con recompensa
             </div>
-            <div className="text-green3 text-sm">
+            <div className="text-green3 text-sm hidden lg:table-cell">
               <button className="border border-gray hover:bg-gray-400 p-3 h-11">
                 <FontAwesomeIcon
                   icon={faList}
@@ -47,22 +47,22 @@ const BlockTable = () => {
           </div>
           <div className="pt-12">
             <table className="customTable bg-white w-full border-t-2 border-gray font-gibson2 ">
-              <thead className="text-lime2 text-lg">
+              <thead className="text-lime2 text-2xl lg:text-lg">
                 <tr>
-                  <th className="w-1/12"># Block</th>
-                  <th className="w-4/12">Header Hash</th>
-                  <th className="w-4/12">Farm</th>
+                  <th className="w-1/12 hidden lg:table-cell"># Block</th>
+                  <th className="w-4/12 hidden lg:table-cell text-left">Header Hash</th>
+                  <th className="w-4/12 text-left pl-2 lg:pl-0">Farmer</th>
                   <th className="w-1/12">Luck</th>
                   <th className="w-1/12">Date</th>
-                  <th className="w-1/12">Reward</th>
+                  <th className="w-1/12 hidden lg:table-cell">Reward</th>
                 </tr>
               </thead>
-              <tbody className="text-xs tracking-wide">
+              <tbody className="text-base lg:text-sm tracking-wide">
                 {Rows}
               </tbody>
             </table>
           </div>
-          <div className="text-white text-sm flex justify-end pt-3">
+          <div className="text-white text-sm lg:flex justify-end pt-3 hidden lg:table-cell">
             <button className="bg-gray2 hover:bg-gray-400 py-2 px-3 mr-1 ">
               <FontAwesomeIcon
                 icon={faArrowUp}

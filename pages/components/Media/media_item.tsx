@@ -10,14 +10,16 @@ interface MyProps {
 
 const MediaItem: FC<MyProps> = ({ icon, value, description }) => {
   return (
-    <div className="font-gibson-light bg-green6 rounded-lg flex flex-col p-4 text-base">
+    <div className="font-gibson-light text-2xl lg:text-xl bg-green6 rounded-lg flex lg:flex-col p-16 lg:p-5 h-full">
       <FontAwesomeIcon
         size="2x"
         icon={icon}
         className="text-white"
       />
-      <span className="font-gibson2 text-lime1 text-xl">{value}</span>
-      <span className="text-xs leading-4 text-green1 font-gibson-light">{description}</span>
+      <div className="flex flex-col ml-10 lg:ml-0">
+        <span className="font-gibson2 text-lime1 text-2xl lg:text-xl">{value}</span>
+        <span className="text-base lg:text-xs leading-4 text-green1 font-gibson-light">{description}</span>
+      </div>
     </div>
   );
 };

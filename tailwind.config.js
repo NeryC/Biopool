@@ -3,7 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
-      padding: '5rem'
+      padding: {
+        xl:'5rem'
+      }
     },
     fontFamily: {
       'gibson': ["Gibson"],
@@ -16,6 +18,10 @@ module.exports = {
     },
     backgroundSize:{
       'promotion-size': 'auto 100%',
+    },
+    backgroundPosition: {
+      'media-md': '25%',
+      'media-lg': '0%',
     },
     extend: {
       backgroundImage: (theme) => ({
@@ -36,9 +42,15 @@ module.exports = {
       },
       height: {
         'hero-spacing': '41rem',
+        'promotion': '28rem',
+      },
+      width: {
+        'promotion': '28rem',
       },
       fontSize: {
+        'xxs': '0.65rem',
         '3.5xl': ['2rem','2.5rem'],
+        '4.5xl': '2.5rem',
       }
     }
   },

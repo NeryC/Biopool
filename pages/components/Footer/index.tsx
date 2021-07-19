@@ -13,16 +13,16 @@ import Copyright from "./copyright";
 const Footer = () => {
   return (
     <>
-      <div className="py-5 bg-green4 font-gibson2">
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-3 sm:gap-3">
-          <div className="flex flex-col justify-center">
+      <div className="py-10 bg-green4 font-gibson2">
+        <div className="container mx-auto grid grid-cols-2 lg:grid-cols-3 lg:gap-3 pt-8 lg:pt-0">
+          <div className="flex flex-col">
             <div className="mb-5 w-36"><img alt="BioPool Logo" src="images/BioPool-white.webp" /></div>
-            <div className="flex mt-5 text-green1 text-sm">
+            <div className="flex mt-5 text-green1 text-base lg:text-sm">
               Gana dinero con el espacio en tu Disco Duro y haz parte de nuestro equipo de Granjeros. 
             </div>
           </div>
 
-          <div className="pt-5 px-16 sm:flex justify-center hidden">
+          <div className="pt-5 px-16 lg:flex justify-center hidden">
             <img alt="Coin Image" src="images/coin.webp" />
           </div>
 
@@ -30,7 +30,7 @@ const Footer = () => {
             <div className="text-green1 flex justify-start sm:justify-end whitespace-nowrap text-sm">
               by <div className="w-36"><img alt="Coin Image" src="images/chiaTKLogo.webp" /></div>
             </div>
-            <div className="my-5 flex flex-wrap justify-start md:justify-center lg:justify-end text-4xl sm:text-3xl">
+            <div className="mb-5 mt-8 flex flex-wrap justify-end text-4xl sm:text-3xl">
               <a href="http://bit.ly/ChiatkTelegram" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon
                   icon={faTelegramPlane}
