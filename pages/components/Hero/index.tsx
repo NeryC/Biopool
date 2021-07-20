@@ -1,6 +1,5 @@
-import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PoolInfo from "./pool-info";
+import PoolBlock from "./pool-block";
+import PoolStats from "./pool-stats";
 
 export const Hero = () => {
   return (
@@ -11,26 +10,21 @@ export const Hero = () => {
       mb-20
     ">
       <div className="
-        my-20
-        lg:grid
-        lg:grid-cols-12
-        lg:gap-4 
+        mt-20 md:mt-32 lg:mt-20 mb-14 md:mb-20 lg:grid lg:grid-cols-12 lg:gap-4
       ">
         <div className="col-span-6 flex flex-col flex-none self-center">
-          <div className="text-black text-5xl lg:text-4xl">
+          <div className="text-black text-4xl md:text-5xl lg:text-4xl font-gibson2">
             <span className="text-lime1 font-gibson-semiBold2">
               ¡Hola!,&nbsp;
             </span>
-            <span>
-              te damos la <br /> bienvenida a BioPool
-            </span>
+            te damos la <br /> bienvenida a BioPool
           </div>
           <div className="mt-5 lg:mt-2">
-            <span className="text-green3 font-gibson-light text-2xl lg:text-xl">
+            <span className="text-green3 font-gibson-light text-xll md:text-3xl lg:text-xl">
               Gana dinero con el espacio en tu Disco Duro y <br />
               haz parte de nuestro equipo de Granjeros.
             </span>
-            <div className="grid grid-cols-4 gap-4 flex items-center mt-12">
+            <div className="grid grid-cols-12 gap-4 flex items-center mt-16 md:mt-20">
               <a
                 className={`
                 text-center
@@ -47,6 +41,9 @@ export const Hero = () => {
                 flex
                 items-center
                 justify-center
+                lg:col-span-4
+                md:col-span-3
+                col-span-5
               `}
                 href="https://youtu.be/bUmPEnffN3k"
                 target="_blank"
@@ -54,7 +51,7 @@ export const Hero = () => {
               >
                 INGRESAR 
               </a>
-              <div className="flex">
+              <div className="flex lg:col-span-4 md:col-span-3 col-span-5">
                 <a href="https://play.google.com/store/apps/details?id=com.chiatk.apps.movil" target="_blank" rel="noreferrer">
                   <img alt="Play Store Logo" className="w-full" src="/images/playStore.webp" />
                 </a>
@@ -62,86 +59,27 @@ export const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="md:mt-12 lg:mt-0 lg:ml-11 lg:col-span-5 flex flex-col self-center bg-green4 p-4 rounded">
+        <div className="mt-16 lg:mt-0 lg:ml-11 lg:col-span-5 flex flex-col self-center bg-green4 p-4 rounded">
           <div className="bg-lime1 mb-3 flex justify-between p-5 lg:p-3">
-            <div className="flex flex-col justify-between text-2xl lg:text-sm">
+            <div className="flex flex-col justify-between text-base md:text-3xl lg:text-sm">
               <div className="flex flex-col">
                 <span className="text-green5 font-gibson-semiBold2">Resumen de la red</span>
                 <span className="text-lime2 font-gibson2">(MainNet)</span>
               </div>
-              <span className="text-white font-gibson-semiBold2 mt-2">Chia Network</span>
+              <span className="text-white font-gibson-semiBold mt-6 lg:mt-2">Chia Network</span>
             </div>
-            <div className="w-24 lg:w-14">
+            <div className="w-16 md:w-24 lg:w-14">
               <img alt="Chia Logo" src="images/ChiaLogo.webp"/>
             </div>
           </div>
           <div className="bg-green3 flex flex-col justify-between px-5 lg:px-4">
-            <div className="flex justify-between font-gibson2 py-7 lg:py-3 text-2xl lg:text-xl">
-              <div className="flex items-center">
-                <FontAwesomeIcon
-                  icon={faCircleNotch}
-                  className={`mx-1 text-white fa-spin text-lime1 `}
-                />
-                <span className="ml-5">Altura de bloque</span>
-              </div>
-              <div className="text-lime1 ">0.0%</div>
-            </div>
-            <div className="flex justify-between font-gibson2 py-7 lg:py-3 text-2xl lg:text-xl">
-              <div className="flex items-center ">
-                <FontAwesomeIcon
-                  icon={faCircleNotch}
-                  className={`mx-1 text-white fa-spin text-lime1 `}
-                />
-                <span className="ml-5">Precio Chia coin</span>
-              </div>
-              <div className="text-lime1 ">0.0%</div>
-            </div>
-            <div className="flex justify-between font-gibson2 py-7 lg:py-3 text-2xl lg:text-xl">
-              <div className="flex items-center ">
-                <FontAwesomeIcon
-                  icon={faCircleNotch}
-                  className={`mx-1 text-white fa-spin text-lime1 `}
-                />
-                <span className="ml-5">Espacio total</span>
-              </div>
-              <div className="text-lime1 ">0.0%</div>
-            </div>
+            <PoolStats title="Altura de bloque" value="0.0%"/>
+            <PoolStats title="Precio Chia coin" value="0.0%"/>
+            <PoolStats title="Espacio total" value="0.0%"/>
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <PoolInfo
-          title="Farmers"
-          imageUrl="images/items/Farmers.webp"
-          description="Número de farmers registrado"
-          type="data"
-          info="00.00"
-        />
-
-        <PoolInfo
-          title="Pool"
-          imageUrl="images/items/Pool.webp"
-          description="Espacio total del Pool"
-          type="data"
-          info="00.00"
-        />
-
-        <PoolInfo
-          title="Bloques"
-          imageUrl="images/items/Bloques.webp"
-          description="Resumen de bloques con recompensa"
-          type="ViewMore"
-          info="Ver más"
-        />
-
-        <PoolInfo
-          title="MainNet"
-          imageUrl="images/items/MainNet.webp"
-          description="Resumen de la red (MainNet) Chia"
-          type="ViewMore"
-          info="Ver más"
-        />
-      </div>
+      <PoolBlock />
     </div>
   );
 };

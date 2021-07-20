@@ -1,11 +1,10 @@
 import React from "react";
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { AppBar } from "./components/App-bar";
-import Faq from "./components/Media";
 import Footer from "./components/Footer";
 import { Hero } from "./components/Hero";
 import PoolInfo from "./components/Block-table";
-import Subscribe from "./components/Promotions";
+import SliderSection from "./components/SliderSection";
 import BusinessModal from "./utils/business-modal";
 
 export default function Home(props: any) {
@@ -13,11 +12,10 @@ export default function Home(props: any) {
     <div id="root" className="mx-auto relative">
       <AppBar />
       <Hero />
-      <Subscribe />
       <PoolInfo />
-      <Faq />
+      <SliderSection />
       <Footer />
-      {/* <BusinessModal /> */}
+      <BusinessModal />
     </div>
   );
 }

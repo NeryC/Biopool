@@ -18,7 +18,7 @@ const customStyles = {
     inset: '50% auto auto 50%',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: "#0b1c28",
+    backgroundColor: "white",
     border:0,
   },
 };
@@ -36,7 +36,7 @@ const BusinessModal = () => {
     empresa: '',
     representante: '',
     email: '',
-    movil: '',
+    movil: '+',
     espacio: 1,
   });
 
@@ -71,11 +71,11 @@ const BusinessModal = () => {
       const tipSpanModal = document.getElementById('tipSpanModal');
       if(tipSpanModal){
         if(response.ok) {
-          tipSpanModal.classList.remove("text-lime1 ");
+          tipSpanModal.classList.remove("text-green5");
           tipSpanModal.classList.remove("text-red-600");
           if(response.status == 201){
             tipSpanModal.classList.remove("hidden");
-            tipSpanModal.classList.add("text-lime1 ");
+            tipSpanModal.classList.add("text-green5");
             tipSpanModal.innerText = 'Sus datos se enviaron correctamente';
             setStatus({
               submited:true
@@ -119,11 +119,23 @@ const BusinessModal = () => {
       submited:false
     })
     e.persist();
+    
+    switch (e.target.name) {
+      case 'movil':
+        if (e.target.value  == ""){
+          e.target.value = "+";
+        }
+        e.target.value = e.target.value.replace(/[^+\d]/g,"");
+        break;
+      default:
+        break;
+    }
     setValues((values) => ({
       ...values,
       [e.target.name]: e.target.value,
     }));
   }
+
   return (
     <Modal
       isOpen={state.modalIsOpen}
@@ -132,16 +144,16 @@ const BusinessModal = () => {
       shouldFocusAfterRender={false}
       className={"p-5 absolute rounded-xl w-11/12 md:w-8/12 lg:w-1/2"}
     >
-      <div className="text-white m-5 font-gibson">
-        <div className="flex justify-between font-gibson-semiBoldtext-2xl pb-6">
+      <div className="m-5 font-gibson2">
+        <div className="flex justify-between font-gibson-semiBold  text-2xl pb-6">
           <div>Plan Empresarial</div>
           <button onClick={closeModal} 
             type="button" 
-            className="bg-green4 rounded-md p-2 inline-flex items-center justify-center"
+            className="bg-lime1 rounded-md p-2 inline-flex items-center justify-center"
           >
             <FontAwesomeIcon
               icon={faTimes}
-              className="text-lime1 "
+              className="text-green5"
             />
           </button>
         </div>
@@ -151,7 +163,7 @@ const BusinessModal = () => {
               <label htmlFor="Business">Empresa</label>
               <input 
                 type="text" id="Business" value={values.empresa} name="empresa" onChange={handleInputChange}
-                className="px-3 py-2 bg-green3 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none text-lime1 "
+                className="px-3 py-2 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none text-green5"
                 autoComplete="off" required maxLength={40}
               />
             </div>
@@ -159,7 +171,7 @@ const BusinessModal = () => {
               <label htmlFor="Representative">Representante Legal</label>
               <input 
                 type="text" id="Representative" value={values.representante} name="representante" onChange={handleInputChange}
-                className="px-3 py-2 bg-green3 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none text-lime1 "
+                className="px-3 py-2 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none text-green5"
                 autoComplete="off" required maxLength={40}
               />
             </div>
@@ -167,7 +179,7 @@ const BusinessModal = () => {
               <label htmlFor="Email">Correo</label>
               <input 
                 type="email" id="Email" value={values.email} name="email" onChange={handleInputChange}
-                className="px-3 py-2 bg-green3 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none  text-lime1 "
+                className="px-3 py-2 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none  text-green5"
                 autoComplete="off" required maxLength={30}
               />
             </div>
@@ -175,7 +187,7 @@ const BusinessModal = () => {
               <label htmlFor="Phone">Número móvil</label>
               <input 
                 type="text" id="Phone" value={values.movil} name="movil" onChange={handleInputChange}
-                className="px-3 py-2 bg-green3 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none text-lime1 "
+                className="px-3 py-2 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none text-green5"
                 autoComplete="off" required maxLength={17}
               />
             </div>
@@ -183,7 +195,7 @@ const BusinessModal = () => {
               <label htmlFor="Space">Espacio total de farmeo (por encima de 1 PB)</label>
               <input 
                 type="number" id="Space" value={values.espacio} name="espacio" onChange={handleInputChange}
-                className="px-3 py-2 bg-green3 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none text-lime1 "
+                className="px-3 py-2 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none text-green5"
                 autoComplete="off" min="1" required
               />
             </div>
@@ -191,7 +203,7 @@ const BusinessModal = () => {
           </div>
           <div className="w-full">
             <span id="tipSpanModal" className="hidden"></span>
-            <button type="submit" disabled={status.submited} className="w-full rounded-lg bg-lime1 px-4 py-2 transition duration-50 focus:outline-none font-semibold hover:bg-lime1 text-xl cursor-pointer">
+            <button type="submit" disabled={status.submited} className="w-full rounded-lg bg-lime1 text-white px-4 py-2 transition duration-50 focus:outline-none font-semibold hover:bg-lime1 text-xl cursor-pointer">
               {
                 loading ? 
                   <FontAwesomeIcon

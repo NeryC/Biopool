@@ -16,11 +16,11 @@ export const PoolInfo: FC<MyProps> = ({ title, type, imageUrl, description, info
           <img alt={title} src={imageUrl}/>
         </div>
         <div className="flex flex-col ">
-          <span className="font-gibson-semiBold2 text-green4">{title}</span>
+          <span className="font-gibson-semiBold text-green4">{title}</span>
           <span className="text-lg lg:text-sm text-green2 mt-1">{description}</span>
         </div>
       </div>
-      <div className="pt-3 font-gibson2 text-lime1">
+      <div className="pt-3 font-gibson2 text-lime1 text-3xl lg:text-base">
         {type === "data" ? <span>{info}</span> : <a href="#">{info}</a>}
       </div>
     </div>

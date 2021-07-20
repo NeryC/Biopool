@@ -11,7 +11,7 @@ const BlockTable = () => {
       <tr key={index} className="text-black text-center font-gibson2 font-bold bg-gray h-16">
         <td className="hidden lg:table-cell">{block.Block}</td>
         <td className="hidden lg:table-cell text-left">{block.Header}</td>
-        <td className="p-5 lg:p-3 text-lime2 text-left text-xl lg:text-sm pl-2 lg:pl-0">{block.Farm}</td>
+        <td className="overflow-hidden overflow-ellipsis py-5 px-2 lg:p-3 text-lime2 text-left text-sm md:text-xl lg:text-sm lg:pl-0">{block.Farm}</td>
         <td>{block.Luck}</td>
         <td>{block.Date}</td>
         <td className="hidden lg:table-cell">{block.Reward}</td>
@@ -20,7 +20,8 @@ const BlockTable = () => {
 
   return (
     <div className="
-      py-28"
+      py-20 
+      md:py-28"
     >
       <div className="
         container 
@@ -29,7 +30,7 @@ const BlockTable = () => {
       >
         <div className="flex flex-col">
           <div className="flex justify-between items-center">
-            <div className="text-green3 text-4.5xl lg:text-4xl">
+            <div className="text-green3 text-4xl md:text-4.5xl lg:text-4xl">
               <span className="font-gibson-semiBold2">Tabla de bloques</span> con recompensa
             </div>
             <div className="text-green3 text-sm hidden lg:table-cell">
@@ -46,14 +47,14 @@ const BlockTable = () => {
             </div>
           </div>
           <div className="pt-12">
-            <table className="customTable bg-white w-full border-t-2 border-gray font-gibson2 ">
-              <thead className="text-lime2 text-2xl lg:text-lg">
+            <table className="customTable table-fixed bg-white w-full border-t-2 border-gray font-gibson2 ">
+              <thead className="text-lime2 text-lg md:text-2xl lg:text-lg">
                 <tr>
                   <th className="w-1/12 hidden lg:table-cell"># Block</th>
                   <th className="w-4/12 hidden lg:table-cell text-left">Header Hash</th>
-                  <th className="w-4/12 text-left pl-2 lg:pl-0">Farmer</th>
+                  <th className="w-6/12 md:w-4/12 text-left p-4 pl-2 lg:pl-0">Farmer</th>
                   <th className="w-1/12">Luck</th>
-                  <th className="w-1/12">Date</th>
+                  <th className="lg:w-1/12 w-2/12">Date</th>
                   <th className="w-1/12 hidden lg:table-cell">Reward</th>
                 </tr>
               </thead>
@@ -62,7 +63,7 @@ const BlockTable = () => {
               </tbody>
             </table>
           </div>
-          <div className="text-white text-sm lg:flex justify-end pt-3 hidden lg:table-cell">
+          <div className="text-white text-sm lg:flex justify-end pt-3 hidden">
             <button className="bg-gray2 hover:bg-gray-400 py-2 px-3 mr-1 ">
               <FontAwesomeIcon
                 icon={faArrowUp}

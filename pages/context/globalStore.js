@@ -3,26 +3,11 @@ import React, {createContext, useReducer} from "react";
 export const Context = createContext();
 
 const initialState = {
-  price: "0", 
-  net_space:"0", 
-  registers:"0",
-  poolSize: "0"
+  modalIsOpen: false
 };
 
 const Reducer = (state, {type, payload}) => {
   switch (type) {
-    case 'SET_PRICES_NETSPACE':
-      return {
-        ...state,
-        price: payload.price,
-        net_space: payload.net_space
-      };
-    case 'SET_REGISTERS_POOLSIZE':
-      return {
-        ...state,
-        registers: payload.registers,
-        poolSize: payload.poolSize
-      };
     case 'SET_MODAL_STATE':
       return {
         ...state,

@@ -11,6 +11,50 @@ body {
   border-spacing: 0 6px;
 }
 
+.ft-slick__dots--custom {
+  height: 8px;
+  width: 14px;
+  background-color: #3A6080;
+  border-radius: 4px;
+  position: relative;
+}
+
+.slick-dots li {
+  width: 14px;
+  margin: 0 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+.slick-dots .slick-active {
+  width: 56px;
+  transition: width 0.3s ease-in-out;
+}
+
+.slick-dots .slick-active .ft-slick__dots--custom {
+  width: 56px;
+  top: 0px;
+  overflow: hidden;
+}
+
+.slick-dots .slick-active .ft-slick__dots--custom .loading {
+  height: 8px;
+  width: 100%;
+  background-color:white;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+.slick-dots li {
+  height: 8px !important;
+  transition: width 0.3s ease-in-out !important;
+}
+
+.slick-dots {
+  bottom: 0px !important;
+}
+
 @font-face {
   font-family: "Gibson";
   src: url("/fonts/Gibson-Regular.ttf");
@@ -21,12 +65,6 @@ body {
   font-family: "Gibson2";
   src: url("/fonts/GibsonRegular.ttf");
   font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gibson-SemiBold";
-  src: url("/fonts/Gibson-SemiBold.ttf");
-  font-style: semibold;
   font-display: swap;
 }
 @font-face {
