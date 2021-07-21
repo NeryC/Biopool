@@ -1,7 +1,56 @@
 import PoolBlock from "./pool-block";
 import StatsBlock from "./stats-block";
+import { useContext, useEffect } from 'react';
+import { Context } from '../../context/globalStore';
+
+async function fetchData(dispatch,byteSize) {
+  let price_net_space_json;
+  let registers_json;
+  try {
+    price_net_space_json = await fetch('https://api.chiatk.com/prices',{
+      headers: {
+        "ChiatkApiKey": "fec9b6f84551-1466-4b91-888d-857d793e"
+      },
+    })
+  } catch (error) {
+    console.log(error)
+  }
+
+  const price_net_space = await price_net_space_json.json();
+
+  try {
+    registers_json = await fetch('https://us-central1-basic-zenith-312516.cloudfunctions.net/getNewPoolData')
+  } catch (error) {
+    console.log(error);
+  }
+  
+  const registers = await registers_json.json();
+  
+  if (price_net_space && registers ){
+    dispatch({type:"SET_PRICES_NETSPACE", 
+      payload:{
+        price: price_net_space.market.price.toFixed(2),
+        net_space: byteSize(price_net_space.netspace, { units: 'iec', precision: 3 }).toString()
+      }
+    })
+    dispatch({type:"SET_REGISTERS_POOLSIZE",
+      payload:{
+        registers:registers.data.data.farmers,
+        poolSize:byteSize(registers.data.data.space, { units: 'iec', precision: 2 }).toString()
+      }
+    })
+  }
+}
 
 export const Hero = () => {
+  const {state, dispatch} = useContext(Context);
+  const byteSize = require('byte-size');
+
+  useEffect(() => {
+    fetchData(dispatch, byteSize);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
+  
   return (
     <div className="
       flex flex-col

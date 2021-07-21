@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { Context } from "../../context/globalStore";
 import PoolInfo from "./pool-info";
 
 export const PoolBlock = () => {
+  const {state} = useContext(Context);
 
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -9,7 +12,7 @@ export const PoolBlock = () => {
         imageUrl="images/items/Farmers.webp"
         description="Número de farmers registrado"
         type="data"
-        info="00.00"
+        info={state.registers}
       />
 
       <PoolInfo
@@ -17,7 +20,7 @@ export const PoolBlock = () => {
         imageUrl="images/items/Pool.webp"
         description="Espacio total del Pool"
         type="data"
-        info="00.00"
+        info={state.poolSize}
       />
 
       <PoolInfo

@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { Context } from "../../context/globalStore";
 import PoolStats from "./pool-stats";
 
 export const StatsBlock = () => {
+  const {state} = useContext(Context);
 
   return (
     <div className="mt-16 lg:mt-0 lg:ml-11 lg:col-span-5 flex flex-col self-center bg-green4 p-4 rounded">
@@ -18,8 +21,8 @@ export const StatsBlock = () => {
       </div>
       <div className="bg-green3 flex flex-col justify-between px-5 lg:px-7">
         <PoolStats title="Altura de bloque" value="0.0%"/>
-        <PoolStats title="Precio Chia coin" value="0.0%"/>
-        <PoolStats title="Espacio total" value="0.0%"/>
+        <PoolStats title="Precio Chia coin" value={`${state.price} $`}/>
+        <PoolStats title="Espacio total" value={state.net_space}/>
       </div>
     </div>
   );
