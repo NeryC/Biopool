@@ -31,9 +31,9 @@ const SliderSection = () => {
   return (
     <div className="bg-green5">
       <Slider {...settings}>
-        <div>
+        {/* <div>
           <Promotion />
-        </div>
+        </div> */}
         <div>
           <Media />
         </div>

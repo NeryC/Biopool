@@ -17,7 +17,7 @@ const BlockTable = () => {
         <div className="flex flex-col">
           <div className="flex justify-between items-center">
             <div className="text-green3 text-4xl md:text-4.5xl lg:text-4xl">
-              <span className="font-gibson-semiBold2">Tabla de bloques</span> con recompensa
+              <span className="font-gibson-semiBold">Tabla de bloques</span> con recompensa
             </div>
             <div className="text-green3 text-sm hidden lg:table-cell">
               <button className="border border-gray hover:bg-gray-400 p-3 h-11">
@@ -36,12 +36,12 @@ const BlockTable = () => {
             <Table />
           </div>
           <div className="text-white text-sm lg:flex justify-end pt-3 hidden">
-            <button className="bg-gray2 hover:bg-gray-400 py-2 px-3 mr-1 ">
+            <button className="bg-gray2 hover:bg-gray-400 py-3 px-4 mr-1 ">
               <FontAwesomeIcon
                 icon={faArrowUp}
               />
             </button>
-            <button className="bg-lime1 hover:bg-gray-400 py-2 px-3">
+            <button className="bg-lime1 hover:bg-gray-400 py-3 px-4">
               <FontAwesomeIcon
                 icon={faArrowDown}
               /> 

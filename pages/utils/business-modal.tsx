@@ -142,10 +142,10 @@ const BusinessModal = () => {
       onRequestClose={closeModal}
       style={customStyles}
       shouldFocusAfterRender={false}
-      className={"p-5 absolute rounded-xl w-11/12 md:w-8/12 lg:w-1/2"}
+      className={"p-5 md:p-10 absolute rounded-xl w-11/12 md:w-8/12 lg:w-1/2"}
     >
       <div className="m-5 font-gibson2">
-        <div className="flex justify-between font-gibson-semiBold  text-2xl pb-6">
+        <div className="flex justify-between font-gibson-semiBold text-2xl md:text-3xl pb-6">
           <div>Plan Empresarial</div>
           <button onClick={closeModal} 
             type="button" 
@@ -157,7 +157,7 @@ const BusinessModal = () => {
             />
           </button>
         </div>
-        <form onSubmit={submit}>
+        <form onSubmit={submit} className="text-lg md:text-xl">
           <div className="pb-6">
             <div className="flex flex-col mb-3 pb-1">
               <label htmlFor="Business">Empresa</label>

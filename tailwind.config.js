@@ -18,7 +18,7 @@ module.exports = {
       }),
       backgroundSize:{
         'promotion-size': 'auto 100%',
-        'footer-size': '20%',
+        'footer-size': '18%',
       },
       backgroundPosition: {
         'media-md': '25%',
@@ -26,7 +26,7 @@ module.exports = {
       },
       colors: {
         "gray": "#F1F1F1",
-        "gray2": "#D6D6D6",
+        "gray2": "#828282",
         "green1": "#789D9E",
         "green2": "#3A6080",
         "green3": "#112B38",
@@ -38,23 +38,26 @@ module.exports = {
       },
       height: {
         'hero-spacing': '41rem',
-        'promotion-md': '28rem',
+        'promotion-md': '37rem',
+        'biopoolBanner-lg': '28rem',//
         'promotion': '39rem',
         'media-spacing': '28rem',
       },
       width: {
-        'promotion': '28rem',
+        'promotion': '39rem',
       },
       fontSize: {
         'xxs': '0.65rem',
         'xxss': '0.72rem',
         'xll': '1.3rem',
+        '2.5xl': '1.7rem',
         '3.5xl': ['2rem','2.5rem'],
         '4.5xl': '2.5rem',
       },
       container: {
         padding: {
           DEFAULT: '1rem',
+          md: '0rem',
           sm: '1.25rem',
           xl:'5rem'
         }

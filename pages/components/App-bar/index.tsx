@@ -15,7 +15,7 @@ export const AppBar = () => {
         <div className="relative col-end-9 lg:col-end-13 col-span-3">
           <input type="text" 
             name="serch"
-            placeholder="Launcher ID or Alias"
+            placeholder="Launcher ID"
             autoComplete="off"
             spellCheck="false"
             className="
@@ -30,9 +30,9 @@ export const AppBar = () => {
               focus:outline-none 
               font-gibson-light 
               text-green1 
-              text-xs
+              text-sm
             "/>
-          <button type="submit" className="absolute right-0 top-0 mt-1 mr-4 text-xxs">
+          <button type="submit" className="absolute right-0 top-0 mt-1 md:mt-2 mr-4 text-base">
             <FontAwesomeIcon
               icon={faSearch}
               className="text-lime1 "

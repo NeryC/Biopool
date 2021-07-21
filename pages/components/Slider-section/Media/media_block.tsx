@@ -9,7 +9,7 @@ import {
 const MediaBlock = () => {
   return (
     <div className="flex flex-col flex-none self-center lg:ml-36 w-full lg:w-auto py-4 lg:py-0">
-      <div className="text-3.5xl font-gibson-bold text-green4 grid md:grid-cols-2 gap-4 ">
+      <div className="text-3.5xl font-gibson-bold text-green4 grid md:grid-cols-2 gap-5 md:gap-6 ">
         <a href="http://bit.ly/ChiatkTelegram" target="_blank"rel="noreferrer">
           <MediaItem icon={faTelegramPlane} value="+3200" description="Usuarios en Telegram"/>
         </a>

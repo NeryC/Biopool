@@ -10,11 +10,12 @@ const Media = () => {
       font-bold 
     ">
       <div className="
-        pt-48
+        pt-56
         pb-8
-        md:pt-20 
-        md:pb-20
-        lg:pb-17
+        md:pt-48
+        md:pb-24
+        lg:pt-28 
+        lg:pb-28
         bg-ecosistema-back
         bg-media-md
         lg:bg-media-lg
@@ -27,23 +28,24 @@ const Media = () => {
             flex flex-col lg:flex-row
           ">
             <div className="col-start-3 col-span-5 flex flex-col self-center text-right text-white">
-              <div className="text-2xl md:text-3xl lg:text-2xl font-gibson-light leading-none">
+              <div className="text-2xl md:text-3xl lg:text-3.5xl font-gibson-light leading-none">
                 Si apenas llegas al
               </div>
-              <div className="text-5xl md:text-6xl lg:text-5xl font-gibson-semiBold leading-tight mt-3 lg:mt-0">
+              <div className="text-5xl md:text-6xl lg:text-6xl font-gibson-semiBold leading-tight mt-4 lg:mt-0">
                 ecosistema chiatk
               </div>
-              <div className="text-lg md:text-2xl lg:text-xl font-gibson-light leading-none">
+              <div className="text-lg md:text-2xl lg:text-2xl font-gibson-light leading-none mt-3 lg:mt-0">
                 y deseas obtener más información puedes:
               </div>
-              <div className="grid grid-cols-12 gap-4 flex items-center mt-8 md:mt-24 lg:mt-9 mb-7">
+              <div className="grid grid-cols-12 md:grid-cols-8 lg:grid-cols-10 gap-4 flex items-center mt-8 mb-8 md:mb-10 md:mt-32 lg:mt-16 lg:mb-7">
                 <a
                   className={`
-                  md:col-start-7
+                  md:col-start-5
+                  lg:col-start-7
                   flex
                   items-center
                   justify-center
-                  md:col-span-3 
+                  md:col-span-2 
                   col-span-6
                   text-center
                   text-white
@@ -53,21 +55,20 @@ const Media = () => {
                   rounded
                   text-xs
                   font-gibson2
-                
                 `}
-                  href="https://youtu.be/bUmPEnffN3k"
+                  href="https://app.chiatk.com/"
                   target="_blank"
                   rel="noreferrer"
                 >
                   INGRESAR 
                 </a>
-                <div className="flex md:col-span-3 col-span-6">
+                <div className="flex md:col-span-2 col-span-6">
                   <a href="https://play.google.com/store/apps/details?id=com.chiatk.apps.movil" target="_blank" rel="noreferrer">
                     <img alt="Play Store Logo" className="w-full" src="/images/playStore.webp" />
                   </a>
                 </div>
               </div>
-              <div className="text-xl md:text-2xl lg:text-lg font-gibson-light leading-none">
+              <div className="text-xl md:text-2xl lg:text-2xl font-gibson-light leading-none">
                 o síguenos en nuestras redes sociales
               </div>
             </div>

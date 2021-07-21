@@ -3,8 +3,9 @@ import React from "react";
 import { AppBar } from "./components/App-bar";
 import Footer from "./components/Footer";
 import { Hero } from "./components/Hero";
-import PoolInfo from "./components/Block-table";
-import SliderSection from "./components/SliderSection";
+import PoolBanner from "./components/Pool-banner";
+import BlockTable from "./components/Block-table";
+import SliderSection from "./components/Slider-section";
 import BusinessModal from "./utils/business-modal";
 
 export default function Home(props: any) {
@@ -12,7 +13,8 @@ export default function Home(props: any) {
     <div id="root" className="mx-auto relative">
       <AppBar />
       <Hero />
-      <PoolInfo />
+      <PoolBanner/>
+      <BlockTable />
       <SliderSection />
       <Footer />
       <BusinessModal />

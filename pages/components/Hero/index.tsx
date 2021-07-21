@@ -13,18 +13,18 @@ export const Hero = () => {
         mt-20 md:mt-32 lg:mt-20 mb-14 md:mb-20 lg:grid lg:grid-cols-12 lg:gap-4
       ">
         <div className="col-span-6 flex flex-col flex-none self-center">
-          <div className="text-black text-4xl md:text-5xl lg:text-4xl font-gibson2">
-            <span className="text-lime1 font-gibson-semiBold2">
+          <div className="text-black text-4xl md:text-5xl font-gibson2">
+            <span className="text-lime1 font-gibson-semiBold">
               ¡Hola!,&nbsp;
             </span>
             te damos la <br /> bienvenida a BioPool
           </div>
-          <div className="mt-5 lg:mt-2">
-            <span className="text-green3 font-gibson-light text-xll md:text-3xl lg:text-xl">
+          <div className="mt-5">
+            <span className="text-green3 font-gibson2 text-xll md:text-3xl lg:text-2xl">
               Gana dinero con el espacio en tu Disco Duro y <br />
               haz parte de nuestro equipo de Granjeros.
             </span>
-            <div className="grid grid-cols-12 gap-4 flex items-center mt-16 md:mt-20">
+            <div className="grid grid-cols-11 gap-4 flex items-center mt-16 md:mt-20">
               <a
                 className={`
                 text-center
@@ -34,24 +34,23 @@ export const Hero = () => {
                 bg-lime1 
                 w-full 
                 h-full
-                rounded
+                rounded-lg
                 lg:text-xs
                 text-base
                 font-gibson2
                 flex
                 items-center
                 justify-center
-                lg:col-span-4
                 md:col-span-3
                 col-span-5
               `}
-                href="https://youtu.be/bUmPEnffN3k"
+                href="https://app.chiatk.com/"
                 target="_blank"
                 rel="noreferrer"
               >
                 INGRESAR 
               </a>
-              <div className="flex lg:col-span-4 md:col-span-3 col-span-5">
+              <div className="flex md:col-span-3 col-span-5">
                 <a href="https://play.google.com/store/apps/details?id=com.chiatk.apps.movil" target="_blank" rel="noreferrer">
                   <img alt="Play Store Logo" className="w-full" src="/images/playStore.webp" />
                 </a>
