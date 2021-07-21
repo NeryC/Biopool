@@ -16,7 +16,7 @@ const BlockTable = () => {
       >
         <div className="flex flex-col">
           <div className="flex justify-between items-center">
-            <div className="text-green3 text-4xl md:text-4.5xl lg:text-4xl">
+            <div className="text-green3 text-4xl md:text-4.5xl lg:text-3.5xl">
               <span className="font-gibson-semiBold">Tabla de bloques</span> con recompensa
             </div>
             <div className="text-green3 text-sm hidden lg:table-cell">

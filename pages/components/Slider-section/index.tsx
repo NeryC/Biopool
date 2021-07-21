@@ -25,15 +25,12 @@ const SliderSection = () => {
     ),
   };
 
-  function dot(dots) {
-    <ul>{dots}</ul>
-  }
   return (
     <div className="bg-green5">
       <Slider {...settings}>
-        {/* <div>
+        <div>
           <Promotion />
-        </div> */}
+        </div>
         <div>
           <Media />
         </div>

@@ -14,8 +14,8 @@ const Media = () => {
         pb-8
         md:pt-48
         md:pb-24
-        lg:pt-28 
-        lg:pb-28
+        lg:pt-20
+        lg:pb-20
         bg-ecosistema-back
         bg-media-md
         lg:bg-media-lg
@@ -28,20 +28,19 @@ const Media = () => {
             flex flex-col lg:flex-row
           ">
             <div className="col-start-3 col-span-5 flex flex-col self-center text-right text-white">
-              <div className="text-2xl md:text-3xl lg:text-3.5xl font-gibson-light leading-none">
+              <div className="text-2xl md:text-3xl lg:text-2xl font-gibson-light leading-none">
                 Si apenas llegas al
               </div>
-              <div className="text-5xl md:text-6xl lg:text-6xl font-gibson-semiBold leading-tight mt-4 lg:mt-0">
+              <div className="text-5xl md:text-6xl lg:text-5xl font-gibson-semiBold leading-tight mt-4 lg:mt-0">
                 ecosistema chiatk
               </div>
-              <div className="text-lg md:text-2xl lg:text-2xl font-gibson-light leading-none mt-3 lg:mt-0">
+              <div className="text-lg md:text-2xl lg:text-xl font-gibson-light leading-none mt-3 lg:mt-0">
                 y deseas obtener más información puedes:
               </div>
-              <div className="grid grid-cols-12 md:grid-cols-8 lg:grid-cols-10 gap-4 flex items-center mt-8 mb-8 md:mb-10 md:mt-32 lg:mt-16 lg:mb-7">
+              <div className="grid grid-cols-12 md:grid-cols-8 gap-4 flex items-center mt-8 mb-8 md:mb-10 md:mt-32 lg:mt-8 lg:mb-3">
                 <a
                   className={`
                   md:col-start-5
-                  lg:col-start-7
                   flex
                   items-center
                   justify-center
@@ -68,7 +67,7 @@ const Media = () => {
                   </a>
                 </div>
               </div>
-              <div className="text-xl md:text-2xl lg:text-2xl font-gibson-light leading-none">
+              <div className="text-xl md:text-2xl lg:text-lg font-gibson-light leading-none">
                 o síguenos en nuestras redes sociales
               </div>
             </div>

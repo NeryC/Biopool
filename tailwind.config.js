@@ -44,7 +44,7 @@ module.exports = {
         'media-spacing': '28rem',
       },
       width: {
-        'promotion': '39rem',
+        'promotion': '28rem',
       },
       fontSize: {
         'xxs': '0.65rem',

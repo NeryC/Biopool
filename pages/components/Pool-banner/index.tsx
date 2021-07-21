@@ -33,16 +33,16 @@ const PoolBanner = () => {
           row-span-4
         ">
           <div className="col-span-10 lg:col-start-6 lg:col-span-5 flex flex-col flex-none self-center">
-            <div className="text-4.5xl md:text-5xl lg:text-6xl font-gibson-semiBold">
+            <div className="text-4.5xl md:text-5xl lg:text-4.5xl font-gibson-semiBold">
               Ya puedes <span className="text-lime1">Farmear </span> en
             </div>
             <div className="w-1/2 md:w-1/3 lg:w-2/5 mt-5">
               <img alt="BioPool Logo" className="" src="/images/BioPool-white.webp" />
             </div>
-            <span className="pt-10 text-2xl md:text-3xl lg:text-4xl">
+            <span className="pt-10 text-2xl md:text-3xl lg:text-2xl">
               Ingresa el link <CopyToClipboard text="https://api.biopool.tk" ><span className="text-lime1 cursor-pointer" onClick={copyLink}>https://api.biopool.tk</span></CopyToClipboard>
             </span>
-            <span className="text-xl md:text-2xl lg:text-3xl">
+            <span className="text-xl md:text-2xl lg:text-xl">
               en el cliente de Chia y comienza a Farmear
             </span>
           </div>

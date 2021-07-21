@@ -62,14 +62,14 @@ export const Hero = () => {
         mt-20 md:mt-32 lg:mt-20 mb-14 md:mb-20 lg:grid lg:grid-cols-12 lg:gap-4
       ">
         <div className="col-span-6 flex flex-col flex-none self-center">
-          <div className="text-black text-4xl md:text-5xl font-gibson2">
+          <div className="text-black text-4xl md:text-5xl lg:text-4xl font-gibson2">
             <span className="text-lime1 font-gibson-semiBold">
               ¡Hola!,&nbsp;
             </span>
             te damos la <br /> bienvenida a BioPool
           </div>
           <div className="mt-5">
-            <span className="text-green3 font-gibson2 text-xll md:text-3xl lg:text-2xl">
+            <span className="text-green3 font-gibson2 text-xll md:text-3xl lg:text-xl">
               Gana dinero con el espacio en tu Disco Duro y <br />
               haz parte de nuestro equipo de Granjeros.
             </span>

@@ -2,7 +2,7 @@ import PromotionItem from "./promotion_item";
 
 export const ItemsBlock = () => {
   return (
-    <div className="grid md:grid-cols-6 lg:grid-cols-8 gap-4 text-center mt-12 w-2/3 md:w-full">
+    <div className="grid md:grid-cols-6 lg:grid-cols-8 gap-4 text-center mt-12 lg:mt-8 w-2/3 md:w-full">
       <div className="md:col-span-2">
         <PromotionItem title="Fee 0%" description="el 1er mes"/>
       </div>
