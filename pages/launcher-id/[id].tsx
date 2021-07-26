@@ -7,7 +7,6 @@ import LauncherTables from '../../components/Launcher-id/Launcher-tables';
 const LauncherId = ({launcherInfo}) =>{
   const {dispatch} = useContext(Context);
   useEffect(() => {
-    console.log(launcherInfo)
     dispatch({type:"SET_LAUNCHER_INFO", 
       payload: {
         ...launcherInfo

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Context } from "../../../context/globalStore";
 import BlocksTable from "./blocks-table";
 import PartialsTable from "./partials-table";
@@ -8,40 +8,39 @@ const LauncherTables = () => {
   const {state} = useContext(Context);
   const {launcher_info} = state;
 
-  let tabsContainer = (typeof window !== 'undefined') ? document.querySelector("#tabs") : null
+  useEffect(() => {
+    let tabsContainer = document.querySelector("#tabs");
 
-  if (tabsContainer){
+    if (tabsContainer){
 
-  
-    let tabTogglers = tabsContainer.querySelectorAll("a");
-    console.log(tabTogglers);
+      let tabTogglers = tabsContainer.querySelectorAll("a");
 
-    tabTogglers.forEach(function(toggler) {
-      toggler.addEventListener("click", function(e) {
-        e.preventDefault();
+      tabTogglers.forEach(function(toggler) {
+        toggler.addEventListener("click", function(e) {
+          e.preventDefault();
 
-        let tabName = this.getAttribute("href");
+          let tabName = this.getAttribute("href");
 
-        let tabContents = document.querySelector("#tab-contents");
-        if(tabContents){
-          for (let i = 0; i < tabContents.children.length; i++) {
+          let tabContents = document.querySelector("#tab-contents");
+          if(tabContents){
+            for (let i = 0; i < tabContents.children.length; i++) {
 
-            tabTogglers[i].parentElement.classList.remove("border-blue-400", "border-b-4", "border-b-2",  "-mb-px", "opacity-100");  tabContents.children[i].classList.remove("hidden");
-            if ("#" + tabContents.children[i].id === tabName) {
-              continue;
+              tabTogglers[i].parentElement.classList.remove("border-blue-400", "border-b-4", "border-b-2",  "-mb-px", "opacity-100");  tabContents.children[i].classList.remove("hidden");
+              if ("#" + tabContents.children[i].id === tabName) {
+                continue;
+              }
+              tabContents.children[i].classList.add("hidden");
+
             }
-            tabContents.children[i].classList.add("hidden");
-
+            e.target && e.target.parentElement.classList.add("border-blue-400", "border-b-4", "-mb-px", "opacity-100");
           }
-          e.target.parentElement.classList.add("border-blue-400", "border-b-4", "-mb-px", "opacity-100");
-        }
+        });
       });
-    });
-    let defaultTab = document.getElementById("default-tab");
+      document.getElementById("default-tab").click();
 
-    defaultTab && defaultTab.click();
+    }
+  }, []);
 
-  }
   return (
     <div className="
       container 
