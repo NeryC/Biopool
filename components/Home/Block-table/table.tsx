@@ -1,4 +1,5 @@
-import Blocks from "../../data/Blocks.json";
+import Link from 'next/link';
+import Blocks from "../../../data/Blocks.json";
 
 const Table = () => {
 
@@ -6,7 +7,7 @@ const Table = () => {
     <tr key={index} className="text-black text-center font-gibson2 font-bold bg-gray h-16">
       <td className="hidden lg:table-cell">{block.Block}</td>
       <td className="hidden lg:table-cell text-left overflow-hidden overflow-ellipsis">{block.Header}</td>
-      <td className="overflow-hidden overflow-ellipsis py-5 px-2 md:py-8 lg:p-3 text-lime2 text-left text-sm md:text-xl lg:text-sm">{block.Farm}</td>
+      <td className="overflow-hidden overflow-ellipsis py-5 px-2 md:py-8 lg:p-3 text-lime2 text-left text-sm md:text-xl lg:text-sm"><Link href={`/launcher-id/${block.Farm}`}>{block.Farm}</Link></td>
       <td>{block.Luck}</td>
       <td>{block.Date}</td>
       <td className="hidden lg:table-cell">{block.Reward}</td>

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "../../context/globalStore";
+import { Context } from "../../../context/globalStore";
 import PoolStats from "./pool-stats";
 
 export const StatsBlock = () => {
@@ -16,7 +16,7 @@ export const StatsBlock = () => {
           <span className="text-white font-gibson-semiBold mt-6 lg:mt-3">Chia Network</span>
         </div>
         <div className="w-16 md:w-24 lg:w-16">
-          <img alt="Chia Logo" src="images/chiaLogo.webp"/>
+          <img alt="Chia Logo" src="/images/chiaLogo.webp"/>
         </div>
       </div>
       <div className="bg-green3 flex flex-col justify-between px-5 lg:px-7">

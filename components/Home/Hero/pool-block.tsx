@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "../../context/globalStore";
+import { Context } from "../../../context/globalStore";
 import PoolInfo from "./pool-info";
 
 export const PoolBlock = () => {
@@ -9,7 +9,7 @@ export const PoolBlock = () => {
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
       <PoolInfo
         title="Farmers"
-        imageUrl="images/items/Farmers.webp"
+        imageUrl="/images/items/Farmers.webp"
         description="Número de farmers registrado"
         type="data"
         info={state.registers}
@@ -17,7 +17,7 @@ export const PoolBlock = () => {
 
       <PoolInfo
         title="Pool"
-        imageUrl="images/items/Pool.webp"
+        imageUrl="/images/items/Pool.webp"
         description="Espacio total del Pool"
         type="data"
         info={state.poolSize}
@@ -25,7 +25,7 @@ export const PoolBlock = () => {
 
       <PoolInfo
         title="Bloques"
-        imageUrl="images/items/Bloques.webp"
+        imageUrl="/images/items/Bloques.webp"
         description="Resumen de bloques con recompensa"
         type="ViewMore"
         info="Ver más"
@@ -33,7 +33,7 @@ export const PoolBlock = () => {
 
       <PoolInfo
         title="MainNet"
-        imageUrl="images/items/MainNet.webp"
+        imageUrl="/images/items/MainNet.webp"
         description="Resumen de la red (MainNet) Chia"
         type="ViewMore"
         info="Ver más"

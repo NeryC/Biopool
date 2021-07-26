@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "../../../context/globalStore";
+import { Context } from "../../../../context/globalStore";
 import ItemsBlock from "./items-block";
 
 const Promotion = () => {
