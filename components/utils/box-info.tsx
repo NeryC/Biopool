@@ -5,10 +5,10 @@ interface MyProps {
   value: string;
 }
 
-export const LauncherInfo: FC<MyProps> = ({ description, value  }) => {
+export const BoxInfo: FC<MyProps> = ({ description, value  }) => {
   return (
     <div className="font-gibson-light border-2 border-lime1 rounded-lg flex flex-col py-7 px-4 justify-between text-2xl lg:text-base">
-      <div className={`font-gibson2 text-lime1 text-3xl lg:text-2xl overflow-hidden overflow-ellipsis`}>
+      <div className={`font-gibson2 text-lime1 text-3xl lg:text-xl overflow-hidden overflow-ellipsis`}>
         <span>{value}</span>
       </div>
       <div className="justify-start">
@@ -18,4 +18,4 @@ export const LauncherInfo: FC<MyProps> = ({ description, value  }) => {
   );
 };
 
-export default LauncherInfo;
+export default BoxInfo;

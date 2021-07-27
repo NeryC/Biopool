@@ -6,9 +6,10 @@ interface MyProps {
   description: string;
   info: string;
   type: string;
+  linkRef?: string;
 }
 
-export const PoolInfo: FC<MyProps> = ({ title, type, imageUrl, description, info  }) => {
+export const PoolInfo: FC<MyProps> = ({ title, type, imageUrl, description, info, linkRef  }) => {
   return (
     <div className="font-gibson-light border-2 border-lime1 rounded-lg flex flex-col py-5 pl-8 pr-36 lg:pr-16 justify-between text-2xl lg:text-base">
       <div className="justify-start">
@@ -21,7 +22,7 @@ export const PoolInfo: FC<MyProps> = ({ title, type, imageUrl, description, info
         </div>
       </div>
       <div className={`pt-4 font-gibson2 text-lime1 text-3xl ${type === "data" ? 'lg:text-2xl': 'lg:text-lg'}`}>
-        {type === "data" ? <span>{info}</span> : <a href="#">{info}</a>}
+        {type === "data" ? <span>{info}</span> : <a href={linkRef}>{info}</a>}
       </div>
     </div>
   );

@@ -10,9 +10,9 @@ export const PoolBlock = () => {
       <PoolInfo
         title="Farmers"
         imageUrl="/images/items/Farmers.webp"
-        description="Número de farmers registrado"
+        description="Número de farmers activos"
         type="data"
-        info={state.registers}
+        info={state.activeUsers}
       />
 
       <PoolInfo
@@ -26,9 +26,9 @@ export const PoolBlock = () => {
       <PoolInfo
         title="Bloques"
         imageUrl="/images/items/Bloques.webp"
-        description="Resumen de bloques con recompensa"
-        type="ViewMore"
-        info="Ver más"
+        description="Cantidad de bloques ganados"
+        type="data"
+        info={state.poolBlocks.length}
       />
 
       <PoolInfo
@@ -37,6 +37,7 @@ export const PoolBlock = () => {
         description="Resumen de la red (MainNet) Chia"
         type="ViewMore"
         info="Ver más"
+        linkRef="#MainNet"
       />
     </div>
   );

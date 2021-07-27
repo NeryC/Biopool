@@ -3,11 +3,14 @@ import React, {createContext, useReducer} from "react";
 export const Context = createContext();
 
 const initialState = {
-  modalIsOpen: false,
+  BusinessModalIsOpen: false,
+  VideoModalIsOpen: false,
   price: "0.0", 
   net_space:"0.0 EiB", 
-  registers:"0",
+  activeUsers:"0",
   poolSize: "0.0 PiB",
+  poolBlocks: [],
+  poolPoints: "0",
   launcher_info: {
     space: "0",
     difficulty:"0",
@@ -26,8 +29,10 @@ const Reducer = (state, {type, payload}) => {
         ...state,
         price: payload.price,
         net_space: payload.net_space,
-        registers: payload.registers,
-        poolSize: payload.poolSize
+        activeUsers: payload.activeUsers,
+        poolSize: payload.poolSize,
+        poolBlocks: payload.poolBlocks,
+        poolPoints: payload.poolPoints
       };
     case 'SET_LAUNCHER_INFO':
       return {
@@ -36,10 +41,15 @@ const Reducer = (state, {type, payload}) => {
           ...payload
         }
       };
-    case 'SET_MODAL_STATE':
+    case 'SET_BUSINESS_MODAL_STATE':
       return {
         ...state,
-        modalIsOpen: payload.modalIsOpen,
+        BusinessModalIsOpen: payload.BusinessModalIsOpen,
+      };
+    case 'SET_VIDEO_MODAL_STATE':
+      return {
+        ...state,
+        VideoModalIsOpen: payload.VideoModalIsOpen,
       };
     default:
       return state;

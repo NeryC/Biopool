@@ -3,7 +3,7 @@ import StatsBlock from "./stats-block";
 
 const Hero = () => {
   return (
-    <div className="
+    <div id="MainNet" className="
       flex flex-col
       container 
       mx-auto
@@ -21,15 +21,19 @@ const Hero = () => {
           </div>
           <div className="mt-5">
             <span className="text-green3 font-gibson2 text-xll md:text-3xl lg:text-xl">
-              Gana dinero con el espacio en tu Disco Duro y <br />
-              haz parte de nuestro equipo de Farmers.
+              Si deseas más información en tu bolsillo, <br/>
+              descarga nuestra app móvil y podrás obtener: <br/>
             </span>
-            <div className="grid grid-cols-11 gap-4 flex items-center mt-16 md:mt-20">
+            <div className="text-green3 font-gibson2 text-base md:text-xl lg:text-base mt-3">
+              1. Notificaciones por bloque ganado y pago recibido. <br/>
+              2. Detalles técnicos de pago recibido y del bloque <br/>
+              3. Detalles de pago por bloque y mucho más… <br/>
+            </div>
+            <div className="grid grid-cols-11 gap-4 flex items-center mt-16 md:mt-10">
               <a
                 className={`
                 text-center
-                py-2
-                border 
+                py-2 
                 text-white
                 bg-lime1 
                 w-full 
@@ -52,7 +56,7 @@ const Hero = () => {
               </a>
               <div className="flex md:col-span-3 col-span-5">
                 <a href="https://play.google.com/store/apps/details?id=com.chiatk.apps.movil" target="_blank" rel="noreferrer">
-                  <img alt="Play Store Logo" className="w-full" src="/images/playStore.webp" />
+                  <img alt="Play Store Logo" className="w-full" src="/images/playStore.svg" />
                 </a>
               </div>
             </div>

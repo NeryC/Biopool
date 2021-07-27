@@ -41,17 +41,19 @@ const BusinessModal = () => {
   });
 
   useEffect(() => {
-    if (state.modalIsOpen) {
+    if (state.BusinessModalIsOpen) {
       noScroll.on()
     }else{
       noScroll.off()
     }
-  },[state.modalIsOpen])
+    
+    return () => noScroll.off()
+  },[state.BusinessModalIsOpen])
 
   function closeModal() {
-    dispatch({type:"SET_MODAL_STATE", 
+    dispatch({type:"SET_BUSINESS_MODAL_STATE", 
       payload:{
-        modalIsOpen: false
+        BusinessModalIsOpen: false
       }
     })
   }
@@ -138,7 +140,7 @@ const BusinessModal = () => {
 
   return (
     <Modal
-      isOpen={state.modalIsOpen}
+      isOpen={state.BusinessModalIsOpen}
       onRequestClose={closeModal}
       style={customStyles}
       shouldFocusAfterRender={false}

@@ -7,9 +7,9 @@ const Footer = () => {
       <div className="bg-green4 font-gibson2 lg:bg-footer-back lg:bg-no-repeat lg:bg-footer-size lg:bg-center">
         <div className="container mx-auto pt-16 md:pt-20 md:pb-28 lg:pb-16">
           <div className="flex justify-between ">
-            <div className="mb-5 w-full md:w-4/12 lg:w-36 items-center"><img alt="BioPool Logo" src="/images/BioPool-white.webp"/></div>
+            <div className="mb-5 w-5/12 md:w-4/12 lg:w-36 items-center"><img alt="BioPool Logo" src="/images/BioPool-white.svg"/></div>
             <div className="text-green1 flex justify-end whitespace-nowrap text-xl lg:text-base">
-              By <div className="w-7/12 md:w-5/12 lg:w-3/12"><img alt="Coin Image" src="/images/chiaTKLogo.webp" /></div>
+              By <div className="w-9/12 md:w-full lg:w-3/4"><img alt="Coin Image" src="/images/chiaTKLogo.svg" /></div>
             </div>
           </div>
           <div className="grid grid-row md:grid-cols-2 md:mt-12 lg:mt-0">

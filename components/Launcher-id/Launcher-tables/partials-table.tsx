@@ -14,7 +14,7 @@ const PartialsTable = ({table}) => {
     <tr key={index} className="text-black text-center font-gibson2 font-bold bg-gray h-14">
       <td className="">{partial.timestamp}</td>
       <td className="overflow-hidden overflow-ellipsis">{partial.difficulty}</td>
-      <td className="overflow-hidden overflow-ellipsis text-base text-lime2">Falta</td>
+      <td className="overflow-hidden overflow-ellipsis text-base text-lime2">Verdadero</td>
     </tr>
   ));
 

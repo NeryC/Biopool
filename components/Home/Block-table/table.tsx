@@ -1,16 +1,17 @@
+import { useContext } from 'react';
 import Link from 'next/link';
-import Blocks from "../../../data/Blocks.json";
+import { Context } from '../../../context/globalStore';
 
 const Table = () => {
-
-  const Rows= Blocks.map((block,index) => (
+  const {state} = useContext(Context);
+  const {poolBlocks} = state;
+  const Rows= poolBlocks.map((block,index) => (
     <tr key={index} className="text-black text-center font-gibson2 font-bold bg-gray h-16">
-      <td className="hidden lg:table-cell">{block.Block}</td>
-      <td className="hidden lg:table-cell text-left overflow-hidden overflow-ellipsis">{block.Header}</td>
-      <td className="overflow-hidden overflow-ellipsis py-5 px-2 md:py-8 lg:p-3 text-lime2 text-left text-sm md:text-xl lg:text-sm"><Link href={`/launcher-id/${block.Farm}`}>{block.Farm}</Link></td>
-      <td>{block.Luck}</td>
-      <td>{block.Date}</td>
-      <td className="hidden lg:table-cell">{block.Reward}</td>
+      <td className="hidden lg:table-cell">{block.block}</td>
+      <td className="hidden lg:table-cell text-left overflow-hidden overflow-ellipsis">{block.coin_hash}</td>
+      <td className="overflow-hidden overflow-ellipsis py-5 px-2 md:py-8 lg:p-3 text-lime2 text-left"><Link href={`/launcher-id/${block.winner_launcher_id}`}>{block.winner_launcher_id}</Link></td>
+      <td>{block.timestamp}</td>
+      <td className="hidden lg:table-cell">{block.amount}</td>
     </tr>
   ));
 
@@ -20,10 +21,9 @@ const Table = () => {
         <tr>
           <th className="w-1/12 hidden lg:table-cell"># Block</th>
           <th className="w-4/12 hidden lg:table-cell text-left">Header Hash</th>
-          <th className="w-6/12 md:w-4/12 text-left p-4 lg:p-2 pl-2 lg:pl-0">Farmer</th>
-          <th className="w-1/12">Luck</th>
-          <th className="md:w-1/12 w-2/12">Date</th>
-          <th className="w-1/12 hidden lg:table-cell">Reward</th>
+          <th className="w-5/12 text-left p-4 lg:p-2 ">Launcher Id</th>
+          <th className="w-1/12">Fecha</th>
+          <th className="w-1/12 hidden lg:table-cell">Recompensa</th>
         </tr>
       </thead>
       <tbody className="text-base lg:text-xs tracking-wide">

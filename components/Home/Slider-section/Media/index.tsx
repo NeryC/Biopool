@@ -63,7 +63,7 @@ const Media = () => {
                 </a>
                 <div className="flex md:col-span-2 col-span-6">
                   <a href="https://play.google.com/store/apps/details?id=com.chiatk.apps.movil" target="_blank" rel="noreferrer">
-                    <img alt="Play Store Logo" className="w-full" src="/images/playStore.webp" />
+                    <img alt="Play Store Logo" className="w-full" src="/images/playStore.svg" />
                   </a>
                 </div>
               </div>

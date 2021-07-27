@@ -55,6 +55,15 @@ body {
   bottom: 0px !important;
 }
 
+#nprogress .bar {
+  background: #7ac231 !important;
+  height: 4px;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #7ac231, 0 0 5px #7ac231;
+}
+
 @font-face {
   font-family: "Gibson";
   src: url("/fonts/Gibson-Regular.ttf");

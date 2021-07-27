@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Context } from "../../../context/globalStore";
-import LauncherInfo from "./launcher-info";
+import BoxInfo from "../../utils/box-info";
 
 const UserInfo = () => {
   const {state} = useContext(Context);
@@ -20,27 +20,27 @@ const UserInfo = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 pt-7">
-          <LauncherInfo
+          <BoxInfo
             description="Espacio estimado"
             value={launcher_info.space}
           />
 
-          <LauncherInfo
+          <BoxInfo
             description="Total de Chias Pagadas"
             value={launcher_info.chias_pagadas}
           />
 
-          <LauncherInfo
+          <BoxInfo
             description="Dificultad"
             value={launcher_info.difficulty}
           />
 
-          <LauncherInfo
+          <BoxInfo
             description="Puntos Actuales"
             value={launcher_info.points}
           />
 
-          <LauncherInfo
+          <BoxInfo
             description="Bloques Encontrados"
             value={launcher_info.blocks.length}
           />

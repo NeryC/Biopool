@@ -1,42 +1,26 @@
 import byteSize from 'byte-size';
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Hero from "../components/Home/Hero";
-import PoolBanner from "../components/Home/Pool-banner";
-import BlockTable from "../components/Home/Block-table";
-import SliderSection from "../components/Home/Slider-section";
-import BusinessModal from "../components/utils/business-modal";
 import { Context } from '../context/globalStore';
-import { useContext, useEffect, useState } from 'react';
-import VideoModal from '../components/utils/video-modal';
+import { useContext, useEffect } from 'react';
+import LeaderboardInfo from '../components/Leaderboard/Leaderboard-info';
 
-function Home({POOL_INFO}) {
-  const {state, dispatch} = useContext(Context);
-  const [showModal, setShowModal] = useState(false);
+const LauncherId = ({launcherInfo}) =>{
+  const {dispatch} = useContext(Context);
   useEffect(() => {
-    setShowModal(true);
-
-    dispatch({type:"SET_POOL_INFO", 
+    dispatch({type:"SET_LAUNCHER_INFO", 
       payload: {
-        price: POOL_INFO.price,
-        net_space: POOL_INFO.net_space,
-        activeUsers: POOL_INFO.activeUsers,
-        poolSize: POOL_INFO.poolSize,
-        poolBlocks: POOL_INFO.poolBlocks
+        ...launcherInfo
       }
     })
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
-  
+
+
   return (
-    <div id="root" className="bg-white text-white font-gibson2 text-xl">
-      <Hero />
-      <PoolBanner/>
-      <BlockTable />
-      <SliderSection />
-      {showModal && state.BusinessModalIsOpen && <BusinessModal />}
-      {showModal && state.VideoModalIsOpen && <VideoModal />}
-    </div>
-  );
+    <>
+      <LeaderboardInfo />
+      {/* <LauncherTables /> */}
+    </>
+  )
 }
 
 export async function getServerSideProps(context) {
@@ -84,13 +68,4 @@ export async function getServerSideProps(context) {
   }
 }
 
-export default Home;
-
-// export async function getStaticProps({ locale }) {
-//   return { 
-//     props: { 
-//       isStatic: true,
-//       ...(await serverSideTranslations(locale, ['common', 'app-bar','card_member_list','tools','subscribe','stats','pool-info','hero','footer','faq','business-modal'])),
-//     } 
-//   };
-// }
+export default LauncherId;

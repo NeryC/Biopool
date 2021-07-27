@@ -3,12 +3,12 @@ import { Context } from "../../../../context/globalStore";
 import ItemsBlock from "./items-block";
 
 const Promotion = () => {
-  const {state, dispatch} = useContext(Context);
+  const { dispatch } = useContext(Context);
 
   function openModal() {
-    dispatch({type:"SET_MODAL_STATE", 
+    dispatch({type:"SET_BUSINESS_MODAL_STATE", 
       payload:{
-        modalIsOpen: true
+        BusinessModalIsOpen: true
       }
     })
   }

@@ -59,7 +59,7 @@ module.exports = {
           DEFAULT: '1rem',
           md: '0rem',
           sm: '1.25rem',
-          xl:'5rem'
+          xl: '2rem'
         }
       },
       padding: {
