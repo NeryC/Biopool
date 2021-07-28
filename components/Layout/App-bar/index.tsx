@@ -3,7 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useState } from "react";
 import { Context } from '../../../context/globalStore';
 import Link from 'next/link';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import NavBar from './navbar';
+
 
 export const AppBar = () => {
   const router = useRouter()
@@ -21,11 +23,14 @@ export const AppBar = () => {
 
   function _handleKeyDown(e)  {
     if (e.key === 'Enter') {
-      router.push(`/launcher-id/${values.launcherId}`)
-      setValues(() => ({
-        launcherId: '',
-      }));
+      redirectToLauncher()
     }
+  }
+  let redirectToLauncher = () =>  {
+    router.push(`/launcher-id/${values.launcherId}`)
+    setValues(() => ({
+      launcherId: '',
+    }));
   }
 
   return (
@@ -34,6 +39,7 @@ export const AppBar = () => {
         <div className="flex place-items-center col-span-3 md:col-span-2 cursor-pointer">
           <Link href="/" passHref><div className="flex"><img alt="BioPool Logo" src="/images/BioPool-logo.svg"/></div></Link>
         </div>
+        <NavBar />
         <div className="relative col-end-9 lg:col-end-13 col-span-3">
           <input type="text" 
             name="launcherId"
@@ -59,14 +65,12 @@ export const AppBar = () => {
               text-sm
             "
           />
-          <Link href={`/launcher-id/${values.launcherId}`} passHref>
-            <button type="submit" className="absolute right-0 top-0 mt-1 md:mt-2 mr-4 text-base">
-              <FontAwesomeIcon
-                icon={faSearch}
-                className="text-lime1 "
-              />
-            </button>
-          </Link>
+          <button type="submit" className="absolute right-0 top-0 h-full mr-4 text-base focus:outline-none" onClick={redirectToLauncher}>
+            <FontAwesomeIcon
+              icon={faSearch}
+              className="text-lime1 "
+            />
+          </button>
         </div>
       </div>
     </div>

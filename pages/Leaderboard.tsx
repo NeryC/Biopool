@@ -2,23 +2,27 @@ import byteSize from 'byte-size';
 import { Context } from '../context/globalStore';
 import { useContext, useEffect } from 'react';
 import LeaderboardInfo from '../components/Leaderboard/Leaderboard-info';
+import RankTable from '../components/Leaderboard/Rank-table';
 
-const LauncherId = ({launcherInfo}) =>{
+
+const LauncherId = ({LAUNCHER_INFO}) =>{
   const {dispatch} = useContext(Context);
   useEffect(() => {
-    dispatch({type:"SET_LAUNCHER_INFO", 
+    dispatch({type:"SET_LEADERBOARD_INFO", 
       payload: {
-        ...launcherInfo
+        net_space: LAUNCHER_INFO.net_space,
+        poolSize: LAUNCHER_INFO.poolSize,
+        poolPoints: LAUNCHER_INFO.poolPoints,
+        farmers: LAUNCHER_INFO.farmers
       }
     })
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
-
   return (
     <>
       <LeaderboardInfo />
-      {/* <LauncherTables /> */}
+      <RankTable />
     </>
   )
 }
@@ -35,7 +39,7 @@ export async function getServerSideProps(context) {
             "ChiatkApiKey": "fec9b6f84551-1466-4b91-888d-857d793e"
           },
         }), 
-        fetch('https://us-central1-basic-zenith-312516.cloudfunctions.net/getNewPoolDataSimple')
+        fetch('https://us-central1-basic-zenith-312516.cloudfunctions.net/getNewPoolData')
     ]);
     
     chiaInfo = await chiaInfo.json();
@@ -46,21 +50,16 @@ export async function getServerSideProps(context) {
 
   return {
     props: { 
-      POOL_INFO:{
-        price: chiaInfo.market.price.toFixed(2),
+      LAUNCHER_INFO:{
         net_space: byteSize(chiaInfo.netspace, { units: 'iec', precision: 3 }).toString(),
-        activeUsers: biopoolInfo.data.data.farmers,
         poolSize: byteSize(biopoolInfo.data.data.space, { units: 'iec', precision: 2 }).toString(),
-        poolPoints:biopoolInfo.data.data.points,
-        poolBlocks: biopoolInfo.data.data.blocks.map(block => {
-          const date1 = new Date(block.timestamp*1000);
-          const date2 = new Date();
-          const diffTime = Math.abs(date2.getTime() - date1.getTime());
-          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+        poolPoints: biopoolInfo.data.data.points,
+        farmers: biopoolInfo.data.farmers.map(farmer => {
           return{
-            ...block,
-            timestamp: `${diffDays} ${diffDays <= 1 ? `day` : `days`} ago`,
-            amount: `${block.amount/1000000000000} XCH`
+            launcher_id: farmer.louncher_id,
+            plotSize: byteSize(farmer.space, { units: 'iec', precision: 2 }).toString(),
+            difficulty: farmer.difficulty,
+            points: farmer.points
           }
         })
       }, 

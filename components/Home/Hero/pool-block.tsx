@@ -6,7 +6,7 @@ export const PoolBlock = () => {
   const {state} = useContext(Context);
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
       <PoolInfo
         title="Farmers"
         imageUrl="/images/items/Farmers.webp"
@@ -31,14 +31,14 @@ export const PoolBlock = () => {
         info={state.poolBlocks.length}
       />
 
-      <PoolInfo
+      {/* <PoolInfo
         title="MainNet"
         imageUrl="/images/items/MainNet.webp"
         description="Resumen de la red (MainNet) Chia"
         type="ViewMore"
         info="Ver más"
         linkRef="#MainNet"
-      />
+      /> */}
     </div>
   );
 };

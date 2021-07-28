@@ -4,10 +4,9 @@ import BoxInfo from "../../utils/box-info";
 
 const LeaderboardInfo = () => {
   const {state} = useContext(Context);
-  
 
   return (
-    <div className="pt-10 md:pt-20 pb-5"
+    <div className="pt-10 md:pt-16 pb-5"
     >
       <div className="
         container 
@@ -19,7 +18,7 @@ const LeaderboardInfo = () => {
           <span className="font-gibson-semiBold">Leaderboard</span>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 pt-7">
+        <div className="grid md:grid-cols-3 gap-4 pt-7">
           <BoxInfo
             description="Espacio Global (Netspace)"
             value={state.net_space}

@@ -19,7 +19,8 @@ const BlockTable = () => {
             <div className="text-green3 text-4xl md:text-4.5xl lg:text-3.5xl">
               <span className="font-gibson-semiBold">Tabla de bloques</span> con recompensa
             </div>
-            <div className="text-green3 text-sm hidden lg:table-cell">
+            <div className="text-green3 text-sm hidden ">
+              {/* lg:table-cell */}
               <button className="border border-gray hover:bg-gray-400 p-3 h-11">
                 <FontAwesomeIcon
                   icon={faList}
@@ -35,7 +36,8 @@ const BlockTable = () => {
           <div className="pt-12">
             <Table />
           </div>
-          <div className="text-white text-sm lg:flex justify-end pt-3 hidden">
+          <div className="text-white text-sm  justify-end pt-3 hidden">
+            {/* lg:flex */}
             <button className="bg-gray2 hover:bg-gray-400 py-3 px-4 mr-1 ">
               <FontAwesomeIcon
                 icon={faArrowUp}

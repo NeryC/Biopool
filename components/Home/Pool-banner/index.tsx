@@ -33,7 +33,7 @@ const PoolBanner = () => {
 
   return (
     <div className="bg-green4 relative">
-      <div className="lg:absolute inset-y-0 lg:h-full md:w-3/4 lg:w-auto">
+      <div className="lg:absolute inset-y-0 lg:h-full md:w-3/4 lg:w-auto lg:-left-40 xl:left-0">
         <img alt="BioPool Background" className="lg:h-full object-left object-cover" src="/images/poolBannerBack.webp" />
       </div>
       <div className="mx-auto container pt-14 pb-32 md:pt-20 lg:py-20 h-full">

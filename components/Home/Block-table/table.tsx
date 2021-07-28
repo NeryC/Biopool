@@ -22,7 +22,7 @@ const Table = () => {
           <th className="w-1/12 hidden lg:table-cell"># Block</th>
           <th className="w-4/12 hidden lg:table-cell text-left">Header Hash</th>
           <th className="w-5/12 text-left p-4 lg:p-2 ">Launcher Id</th>
-          <th className="w-1/12">Fecha</th>
+          <th className="w-2/12 md:w-1/12">Fecha</th>
           <th className="w-1/12 hidden lg:table-cell">Recompensa</th>
         </tr>
       </thead>

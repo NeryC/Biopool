@@ -1,12 +1,12 @@
-import TableLayout from "./table-layout";
+import TableLayout from "../../utils/table-layout";
 
 const PartialsTable = ({table}) => {
 
   const headers = (
     <tr>
-      <th className="w-4/12 md:w-2/12 p-4 lg:p-2 pl-2 lg:pl-0">Fecha</th>
-      <th className="w-4/12 md:w-6/12 p-4 lg:p-2 pl-2 lg:pl-0">Dificultad</th>
-      <th className="w-4/12 md:w-4/12 p-4 lg:p-2 pl-2 lg:pl-0">Valido</th>
+      <th className="w-6/12 md:w-4/12 lg:w-2/12 p-4 lg:p-2 pl-2 lg:pl-0">Fecha</th>
+      <th className="w-3/12 md:w-4/12 lg:w-6/12 p-4 lg:p-2 pl-2 lg:pl-0">Dificultad</th>
+      <th className="w-3/12 md:w-4/12 lg:w-4/12 p-4 lg:p-2 pl-2 lg:pl-0">Valido</th>
     </tr>
   )
 

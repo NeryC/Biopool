@@ -11,6 +11,7 @@ const initialState = {
   poolSize: "0.0 PiB",
   poolBlocks: [],
   poolPoints: "0",
+  farmers: [],
   launcher_info: {
     space: "0",
     difficulty:"0",
@@ -40,6 +41,14 @@ const Reducer = (state, {type, payload}) => {
         launcher_info:{
           ...payload
         }
+      };
+    case 'SET_LEADERBOARD_INFO':
+      return {
+        ...state,
+        net_space: payload.net_space,
+        poolSize: payload.poolSize,
+        poolPoints: payload.poolPoints,
+        farmers: payload.farmers
       };
     case 'SET_BUSINESS_MODAL_STATE':
       return {
