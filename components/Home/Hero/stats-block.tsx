@@ -21,7 +21,7 @@ export const StatsBlock = () => {
       </div>
       <div className="bg-green3 flex flex-col justify-between px-5 lg:px-7">
         {/* <PoolStats title="Altura de bloque" value="0.0%"/> */}
-        <PoolStats title="Precio Chia coin" value={`${state.price} $`}/>
+        <PoolStats title="Precio Chia" value={`${state.price} $`}/>
         <PoolStats title="Espacio total" value={state.net_space}/>
       </div>
     </div>
