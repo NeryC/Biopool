@@ -38,7 +38,7 @@ const Media = () => {
                 y deseas obtener más información puedes:
               </div>
               <div className="grid grid-cols-12 md:grid-cols-8 gap-4 flex items-center mt-8 mb-8 md:mb-10 md:mt-32 lg:mt-8 lg:mb-3">
-                <a
+                {/* <a
                   className={`
                   md:col-start-5
                   flex
@@ -60,7 +60,12 @@ const Media = () => {
                   rel="noreferrer"
                 >
                   INGRESAR 
-                </a>
+                </a> */}
+                <div className="flex md:col-start-5 md:col-span-2 col-span-6">
+                  <a href="https://apps.apple.com/us/app/chiatk/id1570577139" target="_blank" rel="noreferrer">
+                    <img alt="App Store Logo" className="w-full" src="/images/appStore.svg" />
+                  </a>
+                </div>
                 <div className="flex md:col-span-2 col-span-6">
                   <a href="https://play.google.com/store/apps/details?id=com.chiatk.apps.movil" target="_blank" rel="noreferrer">
                     <img alt="Play Store Logo" className="w-full" src="/images/playStore.svg" />

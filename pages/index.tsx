@@ -62,6 +62,7 @@ export async function getServerSideProps({ locale }) {
 
   return {
     props: { 
+      ...(await serverSideTranslations(locale, ['common', 'app-bar','card_member_list','tools','subscribe','stats','pool-info','hero','footer','faq','business-modal'])),
       POOL_INFO:{
         price: chiaInfo.market.price.toFixed(2),
         net_space: byteSize(chiaInfo.netspace, { units: 'iec', precision: 3 }).toString(),
@@ -80,7 +81,6 @@ export async function getServerSideProps({ locale }) {
           }
         })
       }, 
-      ...(await serverSideTranslations(locale, ['common', 'app-bar','card_member_list','tools','subscribe','stats','pool-info','hero','footer','faq','business-modal'])),
     }, // will be passed to the page component as props
   }
 }

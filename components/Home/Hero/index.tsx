@@ -30,7 +30,7 @@ const Hero = () => {
               3. Detalles de pago por bloque y mucho más… <br/>
             </div>
             <div className="grid grid-cols-11 gap-4 flex items-center mt-16 md:mt-10">
-              <a
+              {/* <a
                 className={`
                 text-center
                 py-2 
@@ -53,7 +53,12 @@ const Hero = () => {
                 rel="noreferrer"
               >
                 INGRESAR 
-              </a>
+              </a> */}
+              <div className="flex md:col-span-3 col-span-5">
+                <a href="https://apps.apple.com/us/app/chiatk/id1570577139" target="_blank" rel="noreferrer">
+                  <img alt="App Store Logo" className="w-full" src="/images/appStore.svg" />
+                </a>
+              </div>
               <div className="flex md:col-span-3 col-span-5">
                 <a href="https://play.google.com/store/apps/details?id=com.chiatk.apps.movil" target="_blank" rel="noreferrer">
                   <img alt="Play Store Logo" className="w-full" src="/images/playStore.svg" />
