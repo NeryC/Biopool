@@ -3,7 +3,8 @@ import { Context } from '../context/globalStore';
 import { useContext, useEffect } from 'react';
 import LeaderboardInfo from '../components/Leaderboard/Leaderboard-info';
 import RankTable from '../components/Leaderboard/Rank-table';
-
+import Layout from "../components/Layout";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const LauncherId = ({LAUNCHER_INFO}) =>{
   const {dispatch} = useContext(Context);
@@ -20,14 +21,14 @@ const LauncherId = ({LAUNCHER_INFO}) =>{
   },[]);
 
   return (
-    <>
+    <Layout>
       <LeaderboardInfo />
       <RankTable />
-    </>
+    </Layout>
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
   let chiaInfo;
   let biopoolInfo;
   try {
@@ -50,6 +51,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: { 
+      ...(await serverSideTranslations(locale, ['app-bar','footer','leaderboard'])),
       LAUNCHER_INFO:{
         net_space: byteSize(chiaInfo.netspace, { units: 'iec', precision: 3 }).toString(),
         poolSize: byteSize(biopoolInfo.data.data.space, { units: 'iec', precision: 2 }).toString(),

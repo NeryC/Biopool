@@ -1,9 +1,10 @@
+import { useTranslation } from 'next-i18next';
 import { faList, faChevronDown, faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Table from "./table";
 
 const BlockTable = () => {
-
+  const { t } = useTranslation('block-table');
   return (
     <div className="
       py-20 
@@ -17,7 +18,7 @@ const BlockTable = () => {
         <div className="flex flex-col">
           <div className="flex justify-between items-center">
             <div className="text-green3 text-4xl md:text-4.5xl lg:text-3.5xl">
-              <span className="font-gibson-semiBold">Tabla de bloques</span> con recompensa
+              <span className="font-gibson-semiBold">{t('title1')}</span>{t('title2')}
             </div>
             <div className="text-green3 text-sm hidden ">
               {/* lg:table-cell */}

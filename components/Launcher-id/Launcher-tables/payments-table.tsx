@@ -1,12 +1,13 @@
+import { useTranslation } from 'next-i18next';
 import TableLayout from "../../utils/table-layout";
 
 const PaymentTable = ({table}) => {
-  
+  const { t } = useTranslation('launcher-id');
   const headers = (
     <tr>
-      <th className="w-5/12 md:w-4/12 lg:w-2/12 p-4 lg:p-2 pl-2 lg:pl-0">Fecha</th>
-      <th className="w-3/12 md:w-4/12 lg:w-6/12 p-4 lg:p-2 pl-2 lg:pl-0">Id de Moneda</th>
-      <th className="w-4/12 md:w-4/12 lg:w-4/12 p-4 lg:p-2 pl-2 lg:pl-0">Cantidad</th>
+      <th className="w-5/12 md:w-4/12 lg:w-2/12 p-4 lg:p-2 pl-2 lg:pl-0">{t('date')}</th>
+      <th className="w-3/12 md:w-4/12 lg:w-6/12 p-4 lg:p-2 pl-2 lg:pl-0">{t('coin-id')}</th>
+      <th className="w-4/12 md:w-4/12 lg:w-4/12 p-4 lg:p-2 pl-2 lg:pl-0">{t('quantity')}</th>
     </tr>
   )
 

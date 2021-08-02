@@ -1,8 +1,10 @@
 import { useContext } from "react";
+import { useTranslation } from 'next-i18next';
 import { Context } from "../../../context/globalStore";
 import BoxInfo from "../../utils/box-info";
 
 const UserInfo = () => {
+  const { t } = useTranslation('launcher-id');
   const {state} = useContext(Context);
   const {launcher_info} = state;
 
@@ -16,32 +18,32 @@ const UserInfo = () => {
         "
       >
         <div className="text-4xl md:text-4.5xl lg:text-3.5xl">
-          <span className="font-gibson-semiBold">Información global del Farmer</span>
+          <span className="font-gibson-semiBold">{t('launcher-info-title')}</span>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 pt-7">
           <BoxInfo
-            description="Espacio estimado"
+            description={t('estimated-space')}
             value={launcher_info.space}
           />
 
           <BoxInfo
-            description="Total de Chias Pagadas"
+            description={t('chias-paid')}
             value={launcher_info.chias_pagadas}
           />
 
           <BoxInfo
-            description="Dificultad"
+            description={t('difficulty')}
             value={launcher_info.difficulty}
           />
 
           <BoxInfo
-            description="Puntos Actuales"
+            description={t('current-points')}
             value={launcher_info.points}
           />
 
           <BoxInfo
-            description="Bloques Encontrados"
+            description={t('found-blocks')}
             value={launcher_info.blocks.length}
           />
         </div>

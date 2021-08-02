@@ -1,10 +1,11 @@
 import byteSize from 'byte-size';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Hero from "../components/Home/Hero";
 import PoolBanner from "../components/Home/Pool-banner";
 import BlockTable from "../components/Home/Block-table";
 import SliderSection from "../components/Home/Slider-section";
 import BusinessModal from "../components/utils/business-modal";
+import Layout from "../components/Layout";
 import { Context } from '../context/globalStore';
 import { useContext, useEffect, useState } from 'react';
 import VideoModal from '../components/utils/video-modal';
@@ -28,14 +29,16 @@ function Home({POOL_INFO}) {
   },[]);
   
   return (
-    <div id="root" className="bg-white text-white font-gibson2 text-xl">
-      <Hero />
-      <PoolBanner/>
-      <BlockTable />
-      <SliderSection />
-      {showModal && state.BusinessModalIsOpen && <BusinessModal />}
-      {showModal && state.VideoModalIsOpen && <VideoModal />}
-    </div>
+    <Layout>
+      <div id="root" className="bg-white text-white font-gibson2 text-xl">
+        <Hero />
+        <PoolBanner/>
+        <BlockTable />
+        <SliderSection />
+        {showModal && state.BusinessModalIsOpen && <BusinessModal />}
+        {showModal && state.VideoModalIsOpen && <VideoModal />}
+      </div>
+    </Layout>
   );
 }
 
@@ -62,7 +65,7 @@ export async function getServerSideProps({ locale }) {
 
   return {
     props: { 
-      ...(await serverSideTranslations(locale, ['common', 'app-bar','card_member_list','tools','subscribe','stats','pool-info','hero','footer','faq','business-modal'])),
+      ...(await serverSideTranslations(locale, ['app-bar','footer','block-table','hero','media','pool-banner','promotions','business-modal'])),
       POOL_INFO:{
         price: chiaInfo.market.price.toFixed(2),
         net_space: byteSize(chiaInfo.netspace, { units: 'iec', precision: 3 }).toString(),
@@ -76,7 +79,7 @@ export async function getServerSideProps({ locale }) {
           const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
           return{
             ...block,
-            timestamp: `${diffDays} ${diffDays <= 1 ? `day` : `days`} ago`,
+            timestamp: diffDays,
             amount: `${block.amount/1000000000000} XCH`
           }
         })

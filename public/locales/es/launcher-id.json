@@ -1,0 +1,14 @@
+{
+  "launcher-info-title":"Información global del Farmer",
+  "estimated-space":"Espacio estimado",
+  "chias-paid":"Total de Chias Pagadas",
+  "difficulty":"Dificultad",
+  "current-points":"Puntos Actuales",
+  "found-blocks":"Bloques Encontrados",
+  "payments":"Pagos",
+  "blocks":"Bloques",
+  "partials":"Parciales",
+  "date":"Fecha",
+  "coin-id":"Id de Moneda",
+  "quantity":"Cantidad"
+}

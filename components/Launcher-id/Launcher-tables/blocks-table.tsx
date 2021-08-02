@@ -1,11 +1,12 @@
+import { useTranslation } from 'next-i18next';
 import TableLayout from "../../utils/table-layout";
 
 const BlocksTable = ({table}) => {
-  
+  const { t } = useTranslation('launcher-id');
   const headers = (
     <tr>
-      <th className="w-4/12 lg:w-2/12 p-4 lg:p-2 pl-2 lg:pl-0">Fecha</th>
-      <th className="w-4/12 lg:w-4/12 p-4 lg:p-2 pl-2 lg:pl-0">Bloque</th>
+      <th className="w-4/12 lg:w-2/12 p-4 lg:p-2 pl-2 lg:pl-0">{t('date')}</th>
+      <th className="w-4/12 lg:w-4/12 p-4 lg:p-2 pl-2 lg:pl-0">{t('blocks')}</th>
     </tr>
   )
 

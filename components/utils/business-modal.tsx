@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useTranslation } from 'next-i18next';
 import Modal from 'react-modal';
 import { Context } from '../../context/globalStore';
 import { faTimes, faSpinner } from "@fortawesome/free-solid-svg-icons";
@@ -27,6 +28,7 @@ const customStyles = {
 Modal.setAppElement('#root');
 
 const BusinessModal = () => {
+  const { t } = useTranslation('business-modal');
   const {state, dispatch} = useContext(Context);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState({
@@ -78,14 +80,14 @@ const BusinessModal = () => {
           if(response.status == 201){
             tipSpanModal.classList.remove("hidden");
             tipSpanModal.classList.add("text-green5");
-            tipSpanModal.innerText = 'Sus datos se enviaron correctamente';
+            tipSpanModal.innerText = t('data-sent');
             setStatus({
               submited:true
             })
           } else{
             tipSpanModal.classList.remove("hidden");
-            tipSpanModal.classList.add("text-red-600");
-            tipSpanModal.innerText = 'Este email ya esta suscrito';
+            tipSpanModal.classList.add("text-red-600")
+            tipSpanModal.innerText = t('email-in-use');
             setStatus({
               submited:true
             })
@@ -93,7 +95,7 @@ const BusinessModal = () => {
         } else {
           tipSpanModal.classList.remove("hidden");
           tipSpanModal.classList.add("text-red-600");
-          tipSpanModal.innerText = 'Ocurrio un error';
+          tipSpanModal.innerText = t('there-was-an-error');
           setStatus({
             submited:true
           })
@@ -106,7 +108,7 @@ const BusinessModal = () => {
       if(tipSpanModal){
         tipSpanModal.classList.remove("hidden");
         tipSpanModal.classList.add("text-red-600");
-        tipSpanModal.innerText = 'Ocurrio un error';
+        tipSpanModal.innerText = t('there-was-an-error');
         setStatus({
           submited:true
         })
@@ -148,7 +150,7 @@ const BusinessModal = () => {
     >
       <div className="m-5 font-gibson2">
         <div className="flex justify-between font-gibson-semiBold text-2xl md:text-3xl lg:text-2xl pb-6">
-          <div>Plan Empresarial</div>
+          <div>{t('business-plan')}</div>
           <button onClick={closeModal} 
             type="button" 
             className="bg-lime1 rounded-md p-2 inline-flex items-center justify-center"
@@ -162,7 +164,7 @@ const BusinessModal = () => {
         <form onSubmit={submit} className="text-lg md:text-xl lg:text-base">
           <div className="pb-6">
             <div className="flex flex-col mb-3 pb-1">
-              <label htmlFor="Business">Empresa</label>
+              <label htmlFor="Business">{t('business')}</label>
               <input 
                 type="text" id="Business" value={values.empresa} name="empresa" onChange={handleInputChange}
                 className="px-3 py-2 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none text-green5"
@@ -170,7 +172,7 @@ const BusinessModal = () => {
               />
             </div>
             <div className="flex flex-col mb-3 pb-1">
-              <label htmlFor="Representative">Representante Legal</label>
+              <label htmlFor="Representative">{t('legal-representative')}</label>
               <input 
                 type="text" id="Representative" value={values.representante} name="representante" onChange={handleInputChange}
                 className="px-3 py-2 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none text-green5"
@@ -178,7 +180,7 @@ const BusinessModal = () => {
               />
             </div>
             <div className="flex flex-col mb-3 pb-1">
-              <label htmlFor="Email">Correo</label>
+              <label htmlFor="Email">{t('email')}</label>
               <input 
                 type="email" id="Email" value={values.email} name="email" onChange={handleInputChange}
                 className="px-3 py-2 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none  text-green5"
@@ -186,7 +188,7 @@ const BusinessModal = () => {
               />
             </div>
             <div className="flex flex-col mb-3 pb-1">
-              <label htmlFor="Phone">Número móvil</label>
+              <label htmlFor="Phone">{t('phone')}</label>
               <input 
                 type="text" id="Phone" value={values.movil} name="movil" onChange={handleInputChange}
                 className="px-3 py-2 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none text-green5"
@@ -194,7 +196,7 @@ const BusinessModal = () => {
               />
             </div>
             <div className="flex flex-col mb-3 pb-1">
-              <label htmlFor="Space">Espacio total de farmeo (por encima de 1 PB)</label>
+              <label htmlFor="Space">{t('space')}</label>
               <input 
                 type="number" id="Space" value={values.espacio} name="espacio" onChange={handleInputChange}
                 className="px-3 py-2 rounded-md border border-gray-900 focus:border-lime1 focus:outline-none text-green5"
@@ -214,8 +216,8 @@ const BusinessModal = () => {
                   />
                 :
                   status.submited ?
-                    'Enviado':
-                    'Enviar'
+                    t('sent'):
+                    t('send')
               }
               
             </button>

@@ -1,7 +1,9 @@
+import { useTranslation } from 'next-i18next';
 import PoolBlock from "./pool-block";
 import StatsBlock from "./stats-block";
 
 const Hero = () => {
+  const { t } = useTranslation('hero');
   return (
     <div id="MainNet" className="
       flex flex-col
@@ -15,19 +17,19 @@ const Hero = () => {
         <div className="col-span-6 flex flex-col flex-none self-center">
           <div className="text-black text-4xl md:text-5xl lg:text-4xl font-gibson2">
             <span className="text-lime1 font-gibson-semiBold">
-              ¡Hola!,&nbsp;
+              {t('subtitle1')}&nbsp;
             </span>
-            te damos la <br /> bienvenida a BioPool
+            {t('subtitle2')}<br />
           </div>
           <div className="mt-5">
             <span className="text-green3 font-gibson2 text-xll md:text-3xl lg:text-xl">
-              Si deseas más información en tu bolsillo, <br/>
-              descarga nuestra app móvil y podrás obtener: <br/>
+              {t('description1')}<br/>
+              {t('description2')}<br/>
             </span>
             <div className="text-green3 font-gibson2 text-base md:text-xl lg:text-base mt-3">
-              1. Notificaciones por bloque ganado y pago recibido. <br/>
-              2. Detalles técnicos de pago recibido y del bloque <br/>
-              3. Detalles de pago por bloque y mucho más… <br/>
+              {t('list-item1')}<br/>
+              {t('list-item2')}<br/>
+              {t('list-item3')}<br/>
             </div>
             <div className="grid grid-cols-11 gap-4 flex items-center mt-16 md:mt-10">
               {/* <a

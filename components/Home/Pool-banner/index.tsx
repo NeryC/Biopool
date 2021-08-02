@@ -1,16 +1,18 @@
+import { useContext } from 'react';
+import { useTranslation } from 'next-i18next';
 import { toast } from 'react-toastify';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import { Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useContext } from 'react';
 import { Context } from '../../../context/globalStore';
 
 toast.configure()
 const PoolBanner = () => {
+  const { t } = useTranslation('pool-banner');
   const { dispatch } = useContext(Context);
 
   let copyLink = () =>{
-    toast.success('📋 Link copiado!', {
+    toast.success(t('link-copied'), {
       position: "top-right",
       autoClose: 4000,
       hideProgressBar: false,
@@ -45,7 +47,7 @@ const PoolBanner = () => {
         ">
           <div className="col-span-10 lg:col-start-6 lg:col-span-5 flex flex-col flex-none self-center">
             <div className="text-4.5xl md:text-5xl lg:text-4.5xl font-gibson-semiBold leading-tight">
-              Instructivo para ingresar a
+              {t('instructions-to-enter')}
             </div>
             <div className="w-1/2 md:w-1/3 lg:w-1/3 mt-3">
               <img alt="BioPool Logo" className="" src="/images/BioPool-white.svg" />
@@ -70,18 +72,18 @@ const PoolBanner = () => {
               `}
                 onClick={openModal}
               >
-                VIDEO DE REGISTRO
+                {t('explanatory-video')}
               </button>
               
             </div>
             <div className="text-4.5xl md:text-5xl lg:text-4.5xl font-gibson-semiBold mt-10 leading-tight">
-              Ya puedes <span className="text-lime1">Farmear </span> en <span className="text-lime1">BioPool</span>
+              {t('subtitle1')}<span className="text-lime1">{t('subtitle2')}</span>{t('subtitle3')}<span className="text-lime1">{t('subtitle4')}</span>
             </div>
             <span className="pt-2 text-2xl md:text-3xl lg:text-2xl">
-              Ingresa el link <CopyToClipboard text="https://api.biopool.tk" ><span className="text-lime1 cursor-pointer" onClick={copyLink}>https://api.biopool.tk</span></CopyToClipboard>
+              {t('enter-the-link')}<CopyToClipboard text="https://api.biopool.tk" ><span className="text-lime1 cursor-pointer" onClick={copyLink}>https://api.biopool.tk</span></CopyToClipboard>
             </span>
             <span className="text-xl md:text-2xl lg:text-xl">
-              en el cliente de Chia y comienza a Farmear
+              {t('in-the-client')}
             </span>
           </div>
         </div>

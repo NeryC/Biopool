@@ -1,15 +1,17 @@
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import TableLayout from "../../utils/table-layout";
 
 const FarmersRankTable = ({table}) => {
+  const { t } = useTranslation('leaderboard');
   
   const headers = (
     <tr className="text-base md:text-xl lg:text-base">
       <th className="w-2/12 md:w-1/12 p-4 lg:p-2 pl-2 lg:pl-0">#</th>
-      <th className="w-4/12 md:w-5/12 p-4 lg:p-2 pl-2 lg:pl-0">Farmer</th>
-      <th className="w-3/12 lg:w-1/12 p-4 lg:p-2 pl-2 lg:pl-0">Plot Size</th>
-      <th className="w-1/12 hidden md:table-cell p-4 lg:p-2 pl-2 lg:pl-0 ">Dificultad</th>
-      <th className="w-2/12 lg:w-1/12 p-4 lg:p-2 pl-2 lg:pl-0 ">Puntos</th>
+      <th className="w-4/12 md:w-5/12 p-4 lg:p-2 pl-2 lg:pl-0">{t('farmer')}</th>
+      <th className="w-3/12 lg:w-1/12 p-4 lg:p-2 pl-2 lg:pl-0">{t('plot-size')}</th>
+      <th className="w-1/12 hidden md:table-cell p-4 lg:p-2 pl-2 lg:pl-0 ">{t('difficulty')}</th>
+      <th className="w-2/12 lg:w-1/12 p-4 lg:p-2 pl-2 lg:pl-0 ">{t('points')}</th>
     </tr>
   )
 

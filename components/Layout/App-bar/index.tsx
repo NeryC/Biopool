@@ -1,13 +1,14 @@
+import { useContext, useState } from "react";
+import { useTranslation } from 'next-i18next';
 import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useContext, useState } from "react";
 import { Context } from '../../../context/globalStore';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import NavBar from './navbar';
 
 
 export const AppBar = () => {
+  const { t } = useTranslation('app-bar');
   const router = useRouter()
   const {state} = useContext(Context);
   const [values, setValues] = useState({
@@ -146,10 +147,10 @@ export const AppBar = () => {
             </div>
 					</li>
 					<li className="block p-4 font-gibson2 text-black hover:text-lime1" onClick={redirectToHome}>
-            Inicio
+            {t('home')}
 					</li>
 					<li className="block p-4 font-gibson2 text-black hover:text-lime1" onClick={redirectToLeaderboard}>
-            Leaderboard
+            {t('leaderboard')}
 					</li>
 				</ul>
 			</div>

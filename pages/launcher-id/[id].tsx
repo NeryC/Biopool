@@ -3,6 +3,8 @@ import { Context } from '../../context/globalStore';
 import { useContext, useEffect } from 'react';
 import UserInfo from '../../components/Launcher-id/User-info';
 import LauncherTables from '../../components/Launcher-id/Launcher-tables';
+import Layout from "../../components/Layout";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const LauncherId = ({launcherInfo}) =>{
   const {dispatch} = useContext(Context);
@@ -17,17 +19,17 @@ const LauncherId = ({launcherInfo}) =>{
 
 
   return (
-    <>
+    <Layout>
       <UserInfo />
       <LauncherTables />
-    </>
+    </Layout>
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({params, locale}) {
   let farmerInfo;
   try {
-    farmerInfo = await fetch(`https://us-central1-basic-zenith-312516.cloudfunctions.net/getFarmerData?louncher_id=${context.params.id}`)
+    farmerInfo = await fetch(`https://us-central1-basic-zenith-312516.cloudfunctions.net/getFarmerData?louncher_id=${params.id}`)
     farmerInfo = await farmerInfo.json();
   } catch (error) {
     return {
@@ -42,6 +44,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: { 
+      ...(await serverSideTranslations(locale, ['app-bar','footer','launcher-id'])),
       launcherInfo: {
         ...farmerInfo.data,
         space: byteSize(farmerInfo.data.space, { units: 'iec', precision: 3 }).toString(),
