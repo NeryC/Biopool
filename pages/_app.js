@@ -6,7 +6,7 @@ import "../styles/globals.css";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import Layout from "../components/Layout"
 import GlobalState from "../context/globalStore";
-// import { appWithTranslation } from 'next-i18next'
+import { appWithTranslation } from 'next-i18next'
 
 Router.events.on('routeChangeStart', () => NProgress.start()); 
 Router.events.on('routeChangeComplete', () => NProgress.done()); 
@@ -41,5 +41,5 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-// export default appWithTranslation(MyApp);
-export default MyApp;
+export default appWithTranslation(MyApp);
+// export default MyApp;

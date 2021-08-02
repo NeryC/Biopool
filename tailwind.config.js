@@ -39,7 +39,7 @@ module.exports = {
       height: {
         'hero-spacing': '41rem',
         'promotion-md': '37rem',
-        'biopoolBanner-lg': '28rem',//
+        'biopoolBanner-lg': '28rem',
         'promotion': '39rem',
         'media-spacing': '28rem',
       },

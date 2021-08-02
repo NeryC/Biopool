@@ -1,0 +1,17 @@
+{
+  "title-faq":"Frequent questions",
+  "subtitle-faq-1":"We know you have some questions in mind, we have ",
+  "subtitle-faq-2":"highlighted the most important ones.",
+  "label-faq-1":"What is Chia?",
+  "description-faq-1":"Chia was born in August 2017 with the aim of developing an improved blockchain and smart transaction platform. Chia's network seeks to improve the global financial and payment system, seeking to be the first business digital money. Chia is using the first new consensus algorithm since the creation of Bitcoin, which is the Proof of Space and Time, created by Bram Cohen, the best living network protocol engineer and inventor of BitTorrent. Together with chia, Chialisp is born, the new powerful, easy to audit and secure smart transaction programming language.",
+  "label-faq-2":"Isn't Bitcoin Good Enough?",
+  "description-faq-2":"When Bitcoin was developed, it was not envisioned that specialized hardware could vastly outperform today's computers. What was intended to be a decentralized network is now controlled by a small number of miners, with access to chip-making plants and wholesale electricity purchases. The miners who currently control the Bitcoin network have a competitive advantage and are opposed to changing the protocol even when it is clear that it should be changed. Chia has had ten years to study the new digital money ecosystem, making Chia the most decentralized, secure and user-friendly cryptocurrency.",
+  "label-faq-3":"What do I need to create a plot?",
+  "description-faq-3":"To create a plot the minimum requirements are 4 GB of RAM, 2 processor threads and at least 500 GB of storage. Keep in mind that temporary files can weigh more than 256 GB. To create plots with higher speed, it is recommended to store temporary files on an SSD, due to the size of the files the solid state drive must have at least 257 GB free to be able to create 1 plot. With a 1 TB SSD you can create 3 plots in parallel, with a 2 TB one up to 7 parallel plots and so on progressively. When storing the final files, it is recommended to use high-capacity HDDs to be able to save as many plots as possible. SSDs have a lifespan measured in TBW (Terabytes Written) and each plot can consume between 1.6 and 1.8 TBW. It is recommended to pay attention to the maximum service life of each SSD.",
+  "label-faq-4":"What is the difference between portable and non-portable plot?",
+  "description-faq-4":"Non-portable plots are all those that were created prior to the update scheduled for late May. These cannot be used in official pools, but can still be used for individual farming. After the update scheduled for the end of May all the created plots will be portable. These can be used in the pool or to farm individually, as decided by the user.",
+  "label-faq-5":"How do Chia pools work?",
+  "description-faq-5":"Like other cryptocurrency pools, in Chia the pools are made up of a group of people who farm together. When one of the group's users wins a block, they all share the reward. For Chia pools, the user who wins the block of 2 XCH gets 0.25 XCH and the remaining 1.75 XCH is shared with the pool, ensuring almost constant daily profits to all participants. In order to finance their operations, most pools charge a small commission.",
+  "label-faq-6":"How can I join Chiatk?",
+  "description-faq-6":"Being an official pool, Chiatk requires at least 1 portable plot and internet connection to connect to our server. The pool will be operational after the end of May update."
+}

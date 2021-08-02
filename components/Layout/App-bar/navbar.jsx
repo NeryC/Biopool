@@ -7,7 +7,7 @@ export const NavBar = () => {
 
   return (
     <>
-      <ul className="flex justify-center w-full px-1 pt-2 text-black font-gibson2 text-base col-span-2  md:col-end-6 lg:col-end-8 invisible md:visible">
+      <ul className="flex justify-center w-full px-1 pt-2 text-black font-gibson2 text-base col-span-2  md:col-end-6 lg:col-end-8 invisible lg:visible">
         <li className={`px-4 rounded-t cursor-pointer ${router.pathname == '/' && activeTabStyle}`}><Link href="/">Inicio</Link></li>
         <li className={`px-4 rounded-t cursor-pointer ${router.pathname == '/Leaderboard' && activeTabStyle}`}><Link href="/Leaderboard">Leaderboard</Link></li>
       </ul>

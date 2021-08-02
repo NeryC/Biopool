@@ -54,7 +54,7 @@ const VideoModal = () => {
     >
       <iframe
         className="w-full h-full"
-        src={`https://www.youtube.com/embed/D6IHY51mJSc`}
+        src={`https://www.youtube.com/embed/jZYpCXKGOro`}
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

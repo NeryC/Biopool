@@ -10,7 +10,7 @@ const Hero = () => {
       mb-20
     ">
       <div className="
-        mt-20 md:mt-32 lg:mt-20 mb-14 md:mb-20 lg:grid lg:grid-cols-12 lg:gap-4
+        mt-10 md:mt-20 lg:mt-20 mb-14 md:mb-20 lg:grid lg:grid-cols-12 lg:gap-4
       ">
         <div className="col-span-6 flex flex-col flex-none self-center">
           <div className="text-black text-4xl md:text-5xl lg:text-4xl font-gibson2">

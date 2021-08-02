@@ -34,7 +34,7 @@ const PoolBanner = () => {
   return (
     <div className="bg-green4 relative">
       <div className="lg:absolute inset-y-0 lg:h-full md:w-3/4 lg:w-auto lg:-left-40 xl:left-0">
-        <img alt="BioPool Background" className="lg:h-full object-left object-cover" src="/images/poolBannerBack.webp" />
+        <img alt="BioPool Background" className="lg:h-full object-left object-cover" src="/images/poolBannerBack.png" />
       </div>
       <div className="mx-auto container pt-14 pb-32 md:pt-20 lg:py-20 h-full">
         <div className="
@@ -45,7 +45,7 @@ const PoolBanner = () => {
         ">
           <div className="col-span-10 lg:col-start-6 lg:col-span-5 flex flex-col flex-none self-center">
             <div className="text-4.5xl md:text-5xl lg:text-4.5xl font-gibson-semiBold leading-tight">
-              ¿Instructivo para ingresar a
+              Instructivo para ingresar a
             </div>
             <div className="w-1/2 md:w-1/3 lg:w-1/3 mt-3">
               <img alt="BioPool Logo" className="" src="/images/BioPool-white.svg" />

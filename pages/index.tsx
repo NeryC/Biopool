@@ -1,5 +1,5 @@
 import byteSize from 'byte-size';
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Hero from "../components/Home/Hero";
 import PoolBanner from "../components/Home/Pool-banner";
 import BlockTable from "../components/Home/Block-table";
@@ -39,7 +39,7 @@ function Home({POOL_INFO}) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ locale }) {
   let chiaInfo;
   let biopoolInfo;
   try {
@@ -80,17 +80,9 @@ export async function getServerSideProps(context) {
           }
         })
       }, 
+      ...(await serverSideTranslations(locale, ['common', 'app-bar','card_member_list','tools','subscribe','stats','pool-info','hero','footer','faq','business-modal'])),
     }, // will be passed to the page component as props
   }
 }
 
 export default Home;
-
-// export async function getStaticProps({ locale }) {
-//   return { 
-//     props: { 
-//       isStatic: true,
-//       ...(await serverSideTranslations(locale, ['common', 'app-bar','card_member_list','tools','subscribe','stats','pool-info','hero','footer','faq','business-modal'])),
-//     } 
-//   };
-// }

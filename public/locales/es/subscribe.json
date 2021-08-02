@@ -1,0 +1,9 @@
+{
+  "title-subscribe":"Suscríbete",
+  "subtitle-subscribe":"No te pierdas nuestros lanzamientos y noticias",
+  "suscribe-place-holder":"Correo electrónico",
+  "error-message":"Ha ocurrido un error, inténtelo de nuevo más tarde",
+  "success-message":"El email se registro correctamente",
+  "duplicated-message":"Este email ya esta suscrito",
+  "invalid-message":"El email no es valido"
+}

@@ -1,0 +1,13 @@
+{
+  "business-plan":"Plan Empresarial",
+  "business":"Empresa",
+  "representative":"Representante Legal",
+  "email":"Correo",
+  "phone":"Número móvil",
+  "space":"Espacio total de farmeo (por encima de 1 PB)",
+  "send":"Enviar",
+  "sended":"Enviado",
+  "success-message":"Sus datos se enviaron correctamente",
+  "error-message":"Ocurrio un error",
+  "duplicated-message":"Este email ya esta suscrito"
+}
