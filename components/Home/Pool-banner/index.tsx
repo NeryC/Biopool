@@ -49,20 +49,20 @@ const PoolBanner = () => {
             <div className="text-4.5xl md:text-5xl lg:text-4.5xl font-gibson-semiBold leading-tight">
               {t('instructions-to-enter')}
             </div>
-            <div className="w-1/2 md:w-1/3 lg:w-1/3 mt-3">
+            <div className="w-full md:w-2/3 mt-3">
               <img alt="BioPool Logo" className="" src="/images/BioPool-white.svg" />
               <button
                 className={`
                 text-center
-                py-2
+                py-4
                 mt-5
                 text-white
                 bg-lime1 
                 w-full 
                 h-full
                 rounded
-                lg:text-xs
-                text-base
+                lg:text-base
+                text-lg
                 font-gibson2
                 flex
                 items-center
@@ -76,7 +76,7 @@ const PoolBanner = () => {
               </button>
               
             </div>
-            <div className="text-4.5xl md:text-5xl lg:text-4.5xl font-gibson-semiBold mt-10 leading-tight">
+            <div className="text-4.5xl md:text-5xl lg:text-4.5xl font-gibson-semiBold mt-5 leading-tight">
               {t('subtitle1')}<span className="text-lime1">{t('subtitle2')}</span>{t('subtitle3')}<span className="text-lime1">{t('subtitle4')}</span>
             </div>
             <span className="pt-2 text-2xl md:text-3xl lg:text-2xl">

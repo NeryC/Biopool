@@ -25,8 +25,6 @@ const customStyles = {
 };
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#root');
-
 const BusinessModal = () => {
   const { t } = useTranslation('business-modal');
   const {state, dispatch} = useContext(Context);
@@ -42,6 +40,10 @@ const BusinessModal = () => {
     espacio: 1,
   });
 
+  useEffect(() => {
+    Modal.setAppElement('#root');
+  },[])
+  
   useEffect(() => {
     if (state.BusinessModalIsOpen) {
       noScroll.on()

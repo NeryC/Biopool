@@ -17,9 +17,9 @@ const Hero = () => {
         <div className="col-span-6 flex flex-col flex-none self-center">
           <div className="text-black text-4xl md:text-5xl lg:text-4xl font-gibson2">
             <span className="text-lime1 font-gibson-semiBold">
-              {t('subtitle1')}&nbsp;
+              {t('hello')}&nbsp;
             </span>
-            {t('subtitle2')}<br />
+            {t('subtitle1')}<br />{t('subtitle2')}
           </div>
           <div className="mt-5">
             <span className="text-green3 font-gibson2 text-xll md:text-3xl lg:text-xl">
@@ -30,32 +30,12 @@ const Hero = () => {
               {t('list-item1')}<br/>
               {t('list-item2')}<br/>
               {t('list-item3')}<br/>
+              {t('list-item4')}<br/>
+            </div>
+            <div className="text-green3 font-gibson2 text-base md:text-xl lg:text-base mt-3">
+              {t('what-are-you-waiting')}
             </div>
             <div className="grid grid-cols-11 gap-4 flex items-center mt-16 md:mt-10">
-              {/* <a
-                className={`
-                text-center
-                py-2 
-                text-white
-                bg-lime1 
-                w-full 
-                h-full
-                rounded-lg
-                lg:text-xs
-                text-base
-                font-gibson2
-                flex
-                items-center
-                justify-center
-                md:col-span-3
-                col-span-5
-              `}
-                href="https://app.chiatk.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                INGRESAR 
-              </a> */}
               <div className="flex md:col-span-3 col-span-5">
                 <a href="https://apps.apple.com/us/app/chiatk/id1570577139" target="_blank" rel="noreferrer">
                   <img alt="App Store Logo" className="w-full" src="/images/appStore.svg" />

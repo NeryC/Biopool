@@ -8,7 +8,7 @@ export const PoolBlock = () => {
   const {state} = useContext(Context);
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
       <PoolInfo
         title={t('farmers-title')}
         imageUrl="/images/items/Farmers.webp"
@@ -33,14 +33,13 @@ export const PoolBlock = () => {
         info={state.poolBlocks.length}
       />
 
-      {/* <PoolInfo
-        title="MainNet"
-        imageUrl="/images/items/MainNet.webp"
-        description="Resumen de la red (MainNet) Chia"
-        type="ViewMore"
-        info="Ver más"
-        linkRef="#MainNet"
-      /> */}
+      <PoolInfo
+        title={t('donations-title')}
+        imageUrl="/images/items/love.png"
+        description={t('donations-description')}
+        type="data"
+        info="10%"
+      />
     </div>
   );
 };

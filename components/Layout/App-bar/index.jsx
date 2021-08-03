@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,7 +14,8 @@ export const AppBar = () => {
   const {state} = useContext(Context);
   const [values, setValues] = useState({
     launcherId: '',
-    isMenuOpen: false
+    isMenuOpen: false,
+    isLocalesOpen: false
   });
 
   function handleInputChange(e) {
@@ -30,37 +32,47 @@ export const AppBar = () => {
     }
   }
 
-  let redirectToLauncher = () =>  {
+  const redirectToLauncher = () =>  {
     router.push(`/launcher-id/${values.launcherId}`)
     setValues((state) => ({
       ...state,
       launcherId: '',
-      isMenuOpen: false
+      isMenuOpen: false,
+      isLocalesOpen: false
     }));
   }
 
-  let redirectToHome = () =>  {
+  const redirectToHome = () =>  {
     router.push(`/`)
     setValues((state) => ({
       ...state,
       launcherId: '',
-      isMenuOpen: false
+      isMenuOpen: false,
+      isLocalesOpen: false
     }));
   }
 
-  let redirectToLeaderboard = () =>  {
+  const redirectToLeaderboard = () =>  {
     router.push(`/Leaderboard`)
     setValues((state) => ({
       ...state,
       launcherId: '',
-      isMenuOpen: false
+      isMenuOpen: false,
+      isLocalesOpen: false
     }));
   }
 
-  let openMenu = () =>  {
+  const openMenu = () =>  {
     setValues((state) => ({
       ...state,
       isMenuOpen: !state.isMenuOpen,
+    }));
+  }
+
+  const openLocales = () =>  {
+    setValues((state) => ({
+      ...state,
+      isLocalesOpen: !state.isLocalesOpen,
     }));
   }
 
@@ -71,6 +83,26 @@ export const AppBar = () => {
           <div className="flex" onClick={redirectToHome}><img alt="BioPool Logo" src="/images/BioPool-logo.svg"/></div>
         </div>
         <NavBar />
+
+        <div className="col-end-8 lg:col-end-10 flex text-black place-items-center justify-end">
+          <div className="relative w-full">
+            <button onClick={openLocales} className="flex justify-center w-full focus:outline-none focus:shadow-outline">
+              <img alt="usa flag" className="w-10" src={`/images/flags/${router.locale}.png`} />
+            </button>
+            <div className="absolute flex justify-center w-full mt-2 ">
+              <div className={`px-0 md:px-2 bg-white rounded-md ${values.isLocalesOpen ? 'visible' : 'invisible'}`}>
+                {
+                  router && router.locales && router.locales.map(function (locale, index) {
+                    if(locale !== router.locale)
+                      return <Link key={index} href={router.pathname} locale={locale} passHref><div className="block rounded-lg focus:outline-none focus:shadow-outline cursor-pointer"><img alt="flag" className="w-10" src={`/images/flags/${locale}.png`} /></div></Link>
+                    return null
+                  })
+                }
+              </div>
+            </div>
+          </div>    
+        </div>
+
         <div className="relative col-end-9 lg:col-end-13 col-span-3 hidden lg:flex">
           <input type="text" 
             name="launcherId"
