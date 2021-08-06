@@ -30,7 +30,6 @@ const Hero = () => {
               {t('list-item1')}<br/>
               {t('list-item2')}<br/>
               {t('list-item3')}<br/>
-              {t('list-item4')}<br/>
             </div>
             <div className="text-green3 font-gibson2 text-base md:text-xl lg:text-base mt-3">
               {t('what-are-you-waiting')}

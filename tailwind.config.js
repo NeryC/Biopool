@@ -50,6 +50,8 @@ module.exports = {
         'xxs': '0.65rem',
         'xxss': '0.72rem',
         'xll': '1.3rem',
+        'benefits': ['1.25rem', '2.5rem'],
+        'benefits-md': ['1.5rem', '3.5rem'],
         '2.5xl': '1.7rem',
         '3.5xl': ['2rem','2.5rem'],
         '4.5xl': '2.5rem',

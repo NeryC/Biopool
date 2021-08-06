@@ -9,6 +9,7 @@ import Layout from "../components/Layout";
 import { Context } from '../context/globalStore';
 import { useContext, useEffect, useState } from 'react';
 import VideoModal from '../components/utils/video-modal';
+import Benefits from '../components/Home/Benefits';
 
 function Home({POOL_INFO}) {
   const {state, dispatch} = useContext(Context);
@@ -34,6 +35,7 @@ function Home({POOL_INFO}) {
         <Hero />
         <PoolBanner/>
         <BlockTable />
+        <Benefits />
         <SliderSection />
         {showModal && state.BusinessModalIsOpen && <BusinessModal />}
         {showModal && state.VideoModalIsOpen && <VideoModal />}
@@ -65,7 +67,7 @@ export async function getServerSideProps({ locale }) {
 
   return {
     props: { 
-      ...(await serverSideTranslations(locale, ['app-bar','footer','block-table','hero','media','pool-banner','promotions','business-modal'])),
+      ...(await serverSideTranslations(locale, ['app-bar','footer','block-table','hero','media','pool-banner','promotions','business-modal','benefits'])),
       POOL_INFO:{
         price: chiaInfo.market.price.toFixed(2),
         net_space: byteSize(chiaInfo.netspace, { units: 'iec', precision: 3 }).toString(),

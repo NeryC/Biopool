@@ -1,13 +1,13 @@
 {
-  "data-sent":"Sus datos se enviaron correctamente",
-  "email-in-use":"Este email ya esta suscrito",
-  "there-was-an-error":"Ocurrio un error",
-  "business-plan":"Plan Empresarial",
-  "business":"Empresa",
-  "legal-representative":"Representante Legal",
-  "email":"Correo",
-  "phone":"Número móvil",
-  "space":"Espacio total de farmeo (por encima de 1 PB)",
-  "send":"Enviar",
-  "sent":"Enviado"
+  "data-sent":"Vos données ont été envoyées correctement",
+  "email-in-use":"Cet e-mail est déjà inscrit",
+  "there-was-an-error":"Une erreur s'est produite",
+  "business-plan":"Plan d'affaires",
+  "business":"Entreprise",
+  "legal-representative":"Représentant légal",
+  "email":"Poster",
+  "phone":"Téléphone portable",
+  "space":"Espace agricole total (au-dessus de 1 PB) ",
+  "send":"Envoyer",
+  "sent":"Expédié"
 }

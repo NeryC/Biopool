@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Context } from '../../../context/globalStore';
 import { useRouter } from 'next/router';
 import NavBar from './navbar';
-
+import cookie from 'js-cookie';
 
 export const AppBar = () => {
   const { t } = useTranslation('app-bar');
@@ -76,6 +76,10 @@ export const AppBar = () => {
     }));
   }
 
+  const setLocale = (locale) =>  {
+    cookie.set('NEXT_LOCALE',locale)
+  }
+
   return (
     <div className={`${!state.BusinessModalIsOpen && !state.VideoModalIsOpen && 'sticky'} top-0 py-2 bg-white z-10`}>
       <div className="mx-auto container grid grid-cols-8 lg:grid-cols-12 gap-4 relative my-2">
@@ -94,7 +98,7 @@ export const AppBar = () => {
                 {
                   router && router.locales && router.locales.map(function (locale, index) {
                     if(locale !== router.locale)
-                      return <Link key={index} href={router.pathname} locale={locale} passHref><div className="block rounded-lg focus:outline-none focus:shadow-outline cursor-pointer"><img alt="flag" className="w-10" src={`/images/flags/${locale}.png`} /></div></Link>
+                      return <Link key={index} href={router.asPath} locale={locale} passHref><div className="block rounded-lg focus:outline-none focus:shadow-outline cursor-pointer" onClick={()=>setLocale(locale)}><img alt="flag" className="w-10" src={`/images/flags/${locale}.png`} /></div></Link>
                     return null
                   })
                 }

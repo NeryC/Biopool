@@ -1,11 +1,11 @@
 {
-  "promotions":"Promociones",
-  "subtitle":"Nos encanta tenerte con nosotros, por eso pensamos en ti con estas ofertas de inicio",
-  "description1":"Plan Empresarial.",
-  "description2":"Contáctate con nosotros",
-  "description3":"aquí.",
+  "promotions":"Promotions",
+  "subtitle":"Nous aimons vous avoir avec nous, c'est pourquoi nous pensons à vous avec ces offres de démarrage",
+  "description1":"Plan d'affaires.",
+  "description2":"Nous contacter",
+  "description3":"ici.",
   "fee":"Fee",
-  "first-month":"el 1er mes",
-  "second-month":"el 2do mes",
-  "third-month":"a partir del 3er mes"
+  "first-month":"le 1er mois",
+  "second-month":"le 2ème mois",
+  "third-month":"à partir du 3ème mois"
 }

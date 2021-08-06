@@ -1,14 +1,14 @@
 {
-  "launcher-info-title":"Información global del Farmer",
-  "estimated-space":"Espacio estimado",
-  "chias-paid":"Total de Chias Pagadas",
-  "difficulty":"Dificultad",
-  "current-points":"Puntos Actuales",
-  "found-blocks":"Bloques Encontrados",
-  "payments":"Pagos",
-  "blocks":"Bloques",
-  "partials":"Parciales",
-  "date":"Fecha",
-  "coin-id":"Id de Moneda",
-  "quantity":"Cantidad"
+  "launcher-info-title":"Informations mondiales sur les agriculteurs",
+  "estimated-space":"Espace estimé",
+  "chias-paid":"Total Chias Payé",
+  "difficulty":"Difficulté",
+  "current-points":"Points actuels",
+  "found-blocks":"Blocs trouvés",
+  "payments":"Paiements",
+  "blocks":"Blocs",
+  "partials":"Partiel",
+  "date":"Date",
+  "coin-id":"Id de Devise",
+  "quantity":"Quantité"
 }

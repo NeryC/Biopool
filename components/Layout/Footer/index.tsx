@@ -22,7 +22,7 @@ const Footer = () => {
               <MediaBlock/>
               <div className="text-green1 flex justify-start sm:justify-end whitespace-nowrap text-sm">
                 <div className="">
-                  <a href="https://docs.google.com/document/d/1sBfCOoj3pn-_M4-x6EE737Kx6cpl4ilTgUGJ3EcxqYI/edit?usp=sharing">Términos y condiciones</a>
+                  <a href="https://docs.google.com/document/d/1sBfCOoj3pn-_M4-x6EE737Kx6cpl4ilTgUGJ3EcxqYI/edit?usp=sharing">{t('terms-and-conditions')}</a>
                 </div>
                 {/* |&nbsp;  */}
                 <div className="hidden">

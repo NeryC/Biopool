@@ -1,13 +1,13 @@
 {
-  "data-sent":"Sus datos se enviaron correctamente",
-  "email-in-use":"Este email ya esta suscrito",
-  "there-was-an-error":"Ocurrio un error",
-  "business-plan":"Plan Empresarial",
-  "business":"Empresa",
-  "legal-representative":"Representante Legal",
-  "email":"Correo",
-  "phone":"Número móvil",
-  "space":"Espacio total de farmeo (por encima de 1 PB)",
-  "send":"Enviar",
-  "sent":"Enviado"
+  "data-sent":"Your data was sent correctly",
+  "email-in-use":"This email already exist",
+  "there-was-an-error":"There was an error",
+  "business-plan":"Business plan",
+  "business":"Business",
+  "legal-representative":"Legal representative",
+  "email":"Email",
+  "phone":"Mobile number",
+  "space":"Total farming space (Up to 1 PB)",
+  "send":"Send",
+  "sent":"Sent"
 }

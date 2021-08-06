@@ -22,11 +22,13 @@ const customStyles = {
 };
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#root');
 
 const VideoModal = () => {
   const {state, dispatch} = useContext(Context);
 
+  useEffect(() => {
+    Modal.setAppElement('#root');
+  },[])
   useEffect(() => {
     if (state.VideoModalIsOpen) {
       noScroll.on()

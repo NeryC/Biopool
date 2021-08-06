@@ -1,10 +1,10 @@
 {
   "title":"Leaderboard",
-  "global-space":"Espacio Global (Netspace)",
-  "pool-space":"Espacio del Pool",
-  "global-points":"Puntos Globales",
-  "farmer":"Farmer",
-  "plot-size":"Plot Size",
-  "difficulty":"Dificultad",
-  "points":"Puntos"
+  "global-space":"Espace mondial (Netspace)",
+  "pool-space":"Espace de Pool",
+  "global-points":"Points globaux",
+  "farmer":"Fermier",
+  "plot-size":"Plot Taille",
+  "difficulty":"Difficulté",
+  "points":"Points"
 }

@@ -78,7 +78,7 @@ const Media = () => {
                 {t('title4')}
               </div>
             </div>
-            <div className="hidden lg:contents">
+            <div className="hidden lg:block">
               <MediaBlock />
             </div>
           </div>

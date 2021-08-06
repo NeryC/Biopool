@@ -1,12 +1,12 @@
 {
-  "title1":"Tabla de bloques",
-  "title2":" con recompensa",
-  "block":"# Block",
-  "hash":"Header Hash",
+  "title1":"Tableau des blocs",
+  "title2":" avec récompense",
+  "block":"# Bloquer",
+  "hash":"Tête Hash",
   "launcher-id":"Launcher Id",
-  "date":"Fecha",
-  "reward":"Recompensa",
-  "day":"dia",
-  "days":"dias",
-  "ago":"atras"
+  "date":"Date",
+  "reward":"Récompense",
+  "day":"journée",
+  "days":"jours",
+  "ago":"derrière"
 }
