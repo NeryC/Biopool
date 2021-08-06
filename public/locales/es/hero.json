@@ -1,5 +1,5 @@
 {
-  "hello":"¡Hola!, es",
+  "hello":"¡Hola!,",
   "subtitle1":"te damos la ",
   "subtitle2":" bienvenida a BioPool",
   "description1":"Si deseas más información en tu bolsillo, ",
@@ -15,7 +15,7 @@
   "blocks-title":"Bloques",
   "blocks-description":"Cantidad de bloques ganados",
   "donations-title":"Donaciones",
-  "donations-description":"Lorem Ipsum Dolor Sit Amet dor",
+  "donations-description":"A patir del 2do mes de recolección de Fee",
   "network-summary":"Resumen de la red",
   "mainnet":"(MainNet)",
   "chia-network":"Chia Network",
