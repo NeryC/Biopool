@@ -35,7 +35,7 @@ export const PoolBlock = () => {
 
       <PoolInfo
         title={t('donations-title')}
-        imageUrl="/images/items/love.png"
+        imageUrl="/images/items/love.webp"
         description={t('donations-description')}
         type="data"
         info="10%"

@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/Leaderboard/Rank-table/farmers-rank-table.js", "components/Launcher-id/Launcher-tables/payments-table.js", "components/Launcher-id/Launcher-tables/partials-table.js", "components/Launcher-id/Launcher-tables/blocks-table.js"  ],
   "exclude": [
     "node_modules"
   ]

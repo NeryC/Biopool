@@ -1,14 +1,11 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { useTranslation } from 'next-i18next';
-import { Context } from "../../../context/globalStore";
 import BlocksTable from "./blocks-table";
 import PartialsTable from "./partials-table";
 import PaymentTable from "./payments-table";
 
 const LauncherTables = () => {
   const { t } = useTranslation('launcher-id');
-  const {state} = useContext(Context);
-  const {launcher_info} = state;
 
   useEffect(() => {
     let tabsContainer = document.querySelector("#tabs");
@@ -51,7 +48,7 @@ const LauncherTables = () => {
       py-5
       md:py-10
     ">
-      <ul id="tabs" className="inline-flex w-full px-1 pt-2 ">
+      <ul id="tabs" className="inline-flex w-auto px-1 pt-4 absolute">
         <li className="px-4 py-2 -mb-px font-semibold text-gray-800 border-b-2 border-lime1 rounded-t opacity-50"><a id="default-tab" href="#first">{t('payments')}</a></li>
         <li className="px-4 py-2 font-semibold text-gray-800 rounded-t opacity-50"><a href="#second">{t('blocks')}</a></li>
         <li className="px-4 py-2 font-semibold text-gray-800 rounded-t opacity-50"><a href="#third">{t('partials')}</a></li>
@@ -59,13 +56,13 @@ const LauncherTables = () => {
 
       <div id="tab-contents">
         <div id="first" className="py-4">
-          <PaymentTable table={launcher_info.payments} />
+          <PaymentTable />
         </div>
         <div id="second" className="hidden py-4">
-          <BlocksTable table={launcher_info.blocks} />
+          <BlocksTable />
         </div>
         <div id="third" className="hidden py-4">
-          <PartialsTable table={launcher_info.partials} />
+          <PartialsTable />
         </div>
       </div>
     </div>

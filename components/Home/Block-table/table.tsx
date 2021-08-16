@@ -12,7 +12,7 @@ const Table = () => {
       <td className="hidden lg:table-cell">{block.block}</td>
       <td className="hidden lg:table-cell text-left overflow-hidden overflow-ellipsis">{block.coin_hash}</td>
       <td className="overflow-hidden overflow-ellipsis py-5 px-2 md:py-8 lg:p-3 text-lime2 text-left"><Link href={`/launcher-id/${block.winner_launcher_id}`}>{block.winner_launcher_id}</Link></td>
-      <td> {`${block.timestamp} ${block.timestamp <= 1 ? t('day') : t('days')} ${t('ago')}`}</td>
+      <td> {`${block.time} ${block.time <= 1 ? t('day') : t('days')} ${t('ago')}`}</td>
       <td className="hidden lg:table-cell">{block.amount}</td>
     </tr>
   ));

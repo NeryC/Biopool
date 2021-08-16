@@ -16,7 +16,6 @@ function Home({POOL_INFO}) {
   const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     setShowModal(true);
-
     dispatch({type:"SET_POOL_INFO", 
       payload: {
         price: POOL_INFO.price,
@@ -45,21 +44,19 @@ function Home({POOL_INFO}) {
 }
 
 export async function getServerSideProps({ locale }) {
-  let chiaInfo;
+  let chiaPrice;
+  let chiaNetSpace;
   let biopoolInfo;
   try {
 
-    [chiaInfo, biopoolInfo] = await 
+    [chiaPrice, chiaNetSpace, biopoolInfo] = await 
       Promise.all([
-        fetch('https://api.chiatk.com/prices',{
-          headers: {
-            "ChiatkApiKey": "fec9b6f84551-1466-4b91-888d-857d793e"
-          },
-        }), 
+        fetch('https://xchscan.com/api/chia-price'), 
+        fetch('https://xchscan.com/api/netspace'), 
         fetch('https://us-central1-basic-zenith-312516.cloudfunctions.net/getNewPoolDataSimple')
     ]);
-    
-    chiaInfo = await chiaInfo.json();
+    chiaPrice = await chiaPrice.json();
+    chiaNetSpace = await chiaNetSpace.json();
     biopoolInfo = await biopoolInfo.json();
   } catch (error) {
     console.log(error)
@@ -69,19 +66,18 @@ export async function getServerSideProps({ locale }) {
     props: { 
       ...(await serverSideTranslations(locale, ['app-bar','footer','block-table','hero','media','pool-banner','promotions','business-modal','benefits'])),
       POOL_INFO:{
-        price: chiaInfo.market.price.toFixed(2),
-        net_space: byteSize(chiaInfo.netspace, { units: 'iec', precision: 3 }).toString(),
+        price: chiaPrice.usd,
+        net_space: await byteSize(chiaNetSpace.netspace, { units: 'iec', precision: 3 }).toString(),
         activeUsers: biopoolInfo.data.data.farmers,
-        poolSize: byteSize(biopoolInfo.data.data.space, { units: 'iec', precision: 2 }).toString(),
-        poolPoints:biopoolInfo.data.data.points,
-        poolBlocks: biopoolInfo.data.data.blocks.map(block => {
+        poolSize: await byteSize(biopoolInfo.data.data.space, { units: 'iec', precision: 2 }).toString(),
+        poolBlocks: await biopoolInfo.data.data.blocks.map(block => {
           const date1 = new Date(block.timestamp*1000);
           const date2 = new Date();
           const diffTime = Math.abs(date2.getTime() - date1.getTime());
           const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
           return{
             ...block,
-            timestamp: diffDays,
+            time: diffDays,
             amount: `${block.amount/1000000000000} XCH`
           }
         })

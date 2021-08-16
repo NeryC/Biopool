@@ -1,9 +1,16 @@
 {
-  "benefit-title":"OUR BENEFITS: ",
-  "benefit-item-1":"100% functional mobile app for IOS, Android and Web",
-  "benefit-item-2":"Multi language",
-  "benefit-item-3":"Payments every 24 / h",
-  "benefit-item-4":"Support and assistance",
-  "benefit-item-5":"Active community on the main social networks",
-  "benefit-item-6":"Special discounts for Farmers contributing more than 1PB"
+  "benefit-title1":"Our ",
+  "benefit-title2":"Beneficies",
+  "benefit-title-1":"Mobile App",
+  "benefit-description-1":"100% functional mobile app for IOS, Android and Web",
+  "benefit-title-2":"Multi Language",
+  "benefit-description-2":"English, Spanish, French, Portuguese",
+  "benefit-title-3":"Pay",
+  "benefit-description-3":"Payments every 24/h",
+  "benefit-title-4":"Support and Assistance",
+  "benefit-description-4":"Constant support and assistance to all our services and community",
+  "benefit-title-5":"Social Network",
+  "benefit-description-5":"Active community on the main social networks",
+  "benefit-title-6":"Discounts",
+  "benefit-description-6":"Special discounts for Farmers contributing more than 1PB"
 }

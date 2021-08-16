@@ -1,10 +1,13 @@
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import TableLayout from "../../utils/table-layout";
+import { LABELS } from '../../utils/constants';
+import useTableLogic from '../../hooks/useTableLogic';
 
-const FarmersRankTable = ({table}) => {
+const FarmersRankTable = () => {
   const { t } = useTranslation('leaderboard');
-  
+  const [values, handleChangePage, handleChangeOrder] = useTableLogic(LABELS.RANK_TABLE)
+
   const headers = (
     <tr className="text-base md:text-xl lg:text-base">
       <th className="w-2/12 md:w-1/12 p-4 lg:p-2 pl-2 lg:pl-0">#</th>
@@ -15,7 +18,7 @@ const FarmersRankTable = ({table}) => {
     </tr>
   )
 
-  const rows= table.map((farmer,index) => (
+  const rows= values.blockChunks.length>0 && values.blockChunks[values.actualPage]?.map((farmer,index) => (
     <tr key={index} className="text-black text-center font-gibson2 font-bold bg-gray h-14">
       <td className="overflow-hidden overflow-ellipsis">{index+1}</td>
       <td className="overflow-hidden overflow-ellipsis text-lime2 text-sm text-left"><Link href={`/launcher-id/${farmer.launcher_id}`}>{farmer.launcher_id}</Link></td>
@@ -27,7 +30,14 @@ const FarmersRankTable = ({table}) => {
 
 
   return (
-    <TableLayout headers={headers} rows={rows} />
+    <TableLayout 
+      headers={headers} 
+      rows={rows} 
+      totalPages={values.totalPages} 
+      actualPage={values.actualPage} 
+      handleChangeOrder={handleChangeOrder}
+      handleChangePage={handleChangePage}
+    />
   );
 };
 

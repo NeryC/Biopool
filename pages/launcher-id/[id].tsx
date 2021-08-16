@@ -59,13 +59,13 @@ export async function getServerSideProps({params, locale}) {
         partials: farmerInfo.data.partials.map(partial => {
           return {
             ...partial,
-            timestamp: new  Date(partial.timestamp*1000).toLocaleString()
+            time: new  Date(partial.timestamp*1000).toLocaleString()
           } 
         }),
         blocks: farmerInfo.data.blocks.map( block => {
           return {
             ...block,
-            timestamp: new  Date(block.timestamp*1000).toLocaleString()
+            time: new  Date(block.timestamp*1000).toLocaleString()
           }
         })
       },

@@ -1,9 +1,16 @@
 {
-  "benefit-title":"NOSSOS BENEFÍCIOS: ",
-  "benefit-item-1":"Aplicativo móvel 100% funcional para IOS, Android e Web",
-  "benefit-item-2":"Multi Idiomas",
-  "benefit-item-3":"Pagamentos a cada 24/h",
-  "benefit-item-4":"Suporte e assistência",
-  "benefit-item-5":"Comunidade ativa nas principais redes sociais",
-  "benefit-item-6":"Descontos especiais para agricultores que contribuam com mais de 1 PB",
+  "benefit-title1":"Nossos ",
+  "benefit-title2":"Benefícios",
+  "benefit-title-1":"Aplicativo móvel",
+  "benefit-description-1":"Aplicativo móvel 100% funcional para IOS, Android e Web",
+  "benefit-title-2":"Multi Idiomas",
+  "benefit-description-2":"Inglês, espanhol, francês, português",
+  "benefit-title-3":"Pagamentos",
+  "benefit-description-3":"Pagamentos a cada 24/h",
+  "benefit-title-4":"Suporte e assistência",
+  "benefit-description-4":"Apoio e assistência constante a todos os nossos serviços e comunidade",
+  "benefit-title-5":"Comunidade",
+  "benefit-description-5":"Comunidade ativa nas principais redes sociais",
+  "benefit-title-6":"Descontos",
+  "benefit-description-6":"Descontos especiais para agricultores que contribuam com mais de 1 PB"
 }
