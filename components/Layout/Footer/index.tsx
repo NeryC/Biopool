@@ -1,7 +1,9 @@
+import { useTranslation } from 'next-i18next';
 import MediaBlock from "./media-block";
 import Copyright from "./copyright";
 
 const Footer = () => {
+  const { t } = useTranslation('footer');
   return (
     <>
       <div className="bg-green4 font-gibson2 lg:bg-footer-back lg:bg-no-repeat lg:bg-footer-size lg:bg-center">
@@ -14,17 +16,17 @@ const Footer = () => {
           </div>
           <div className="grid grid-row md:grid-cols-2 md:mt-12 lg:mt-0">
             <div className="flex mt-12 md:mt-2 lg:mt-5 text-green1 text-base lg:text-sm lg:w-1/2">
-              Gana dinero con el espacio en tu Disco Duro y haz parte de nuestro equipo de Farmers. 
+              {t('description')}
             </div>
             <div className="my-16 md:my-0 ">
               <MediaBlock/>
               <div className="text-green1 flex justify-start sm:justify-end whitespace-nowrap text-sm">
                 <div className="">
-                  <a href="https://docs.google.com/document/d/1sBfCOoj3pn-_M4-x6EE737Kx6cpl4ilTgUGJ3EcxqYI/edit?usp=sharing">Términos y condiciones</a>
+                  <a href="https://docs.google.com/document/d/1sBfCOoj3pn-_M4-x6EE737Kx6cpl4ilTgUGJ3EcxqYI/edit?usp=sharing">{t('terms-and-conditions')}</a>
                 </div>
                 {/* |&nbsp;  */}
                 <div className="hidden">
-                  <a href="#">Política de privacidad</a>
+                  <a href="#">{t('terms-and-conditions')}</a>
                 </div>
               </div>
             </div>

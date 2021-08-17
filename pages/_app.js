@@ -4,7 +4,6 @@ import 'nprogress/nprogress.css';
 import Router from "next/router";
 import "../styles/globals.css";
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import Layout from "../components/Layout"
 import GlobalState from "../context/globalStore";
 import { appWithTranslation } from 'next-i18next'
 
@@ -33,9 +32,7 @@ function MyApp({ Component, pageProps }) {
         <title>BioPool</title>
       </Head>
       <GlobalState>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
       </GlobalState>
     </>
   );

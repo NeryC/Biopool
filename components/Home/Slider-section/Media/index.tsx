@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslation } from 'next-i18next';
 import MediaBlock from "./media_block";
 
 const Media = () => {
+  const { t } = useTranslation('media');
   return (
     <div className="
       bg-green5       
@@ -29,13 +31,13 @@ const Media = () => {
           ">
             <div className="col-start-3 col-span-5 flex flex-col self-center text-right text-white">
               <div className="text-2xl md:text-3xl lg:text-2xl font-gibson-light leading-none">
-                Si apenas llegas al
+                {t('title1')}
               </div>
               <div className="text-5xl md:text-6xl lg:text-5xl font-gibson-semiBold leading-tight mt-4 lg:mt-0">
-                ecosistema chiatk
+                {t('title2')}
               </div>
               <div className="text-lg md:text-2xl lg:text-xl font-gibson-light leading-none mt-3 lg:mt-0">
-                y deseas obtener más información puedes:
+                {t('title3')}
               </div>
               <div className="grid grid-cols-12 md:grid-cols-8 gap-4 flex items-center mt-8 mb-8 md:mb-10 md:mt-32 lg:mt-8 lg:mb-3">
                 {/* <a
@@ -73,10 +75,10 @@ const Media = () => {
                 </div>
               </div>
               <div className="text-xl md:text-2xl lg:text-lg font-gibson-light leading-none">
-                o síguenos en nuestras redes sociales
+                {t('title4')}
               </div>
             </div>
-            <div className="hidden lg:contents">
+            <div className="hidden lg:block">
               <MediaBlock />
             </div>
           </div>

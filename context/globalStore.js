@@ -32,8 +32,7 @@ const Reducer = (state, {type, payload}) => {
         net_space: payload.net_space,
         activeUsers: payload.activeUsers,
         poolSize: payload.poolSize,
-        poolBlocks: payload.poolBlocks,
-        poolPoints: payload.poolPoints
+        poolBlocks: payload.poolBlocks
       };
     case 'SET_LAUNCHER_INFO':
       return {

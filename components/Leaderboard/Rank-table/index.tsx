@@ -1,9 +1,6 @@
-import { useContext } from "react";
-import { Context } from "../../../context/globalStore";
 import FarmersRankTable from "./farmers-rank-table";
 
 const RankTable = () => {
-  const {state} = useContext(Context);
   return (
     <div className="
       container 
@@ -13,7 +10,7 @@ const RankTable = () => {
       md:pt-5
       md:pb-10
     ">
-      <FarmersRankTable table={state.farmers} />
+      <FarmersRankTable />
     </div>
   );
 };

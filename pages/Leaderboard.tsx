@@ -3,7 +3,8 @@ import { Context } from '../context/globalStore';
 import { useContext, useEffect } from 'react';
 import LeaderboardInfo from '../components/Leaderboard/Leaderboard-info';
 import RankTable from '../components/Leaderboard/Rank-table';
-
+import Layout from "../components/Layout";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const LauncherId = ({LAUNCHER_INFO}) =>{
   const {dispatch} = useContext(Context);
@@ -20,29 +21,24 @@ const LauncherId = ({LAUNCHER_INFO}) =>{
   },[]);
 
   return (
-    <>
+    <Layout>
       <LeaderboardInfo />
       <RankTable />
-    </>
+    </Layout>
   )
 }
 
-export async function getServerSideProps(context) {
-  let chiaInfo;
+export async function getServerSideProps({locale}) {
+  let chiaNetSpace;
   let biopoolInfo;
   try {
 
-    [chiaInfo, biopoolInfo] = await 
+    [chiaNetSpace, biopoolInfo] = await 
       Promise.all([
-        fetch('https://api.chiatk.com/prices',{
-          headers: {
-            "ChiatkApiKey": "fec9b6f84551-1466-4b91-888d-857d793e"
-          },
-        }), 
+        fetch('https://xchscan.com/api/netspace'), 
         fetch('https://us-central1-basic-zenith-312516.cloudfunctions.net/getNewPoolData')
     ]);
-    
-    chiaInfo = await chiaInfo.json();
+    chiaNetSpace = await chiaNetSpace.json();
     biopoolInfo = await biopoolInfo.json();
   } catch (error) {
     console.log(error)
@@ -50,8 +46,9 @@ export async function getServerSideProps(context) {
 
   return {
     props: { 
+      ...(await serverSideTranslations(locale, ['app-bar','footer','leaderboard'])),
       LAUNCHER_INFO:{
-        net_space: byteSize(chiaInfo.netspace, { units: 'iec', precision: 3 }).toString(),
+        net_space: byteSize(chiaNetSpace.netspace, { units: 'iec', precision: 3 }).toString(),
         poolSize: byteSize(biopoolInfo.data.data.space, { units: 'iec', precision: 2 }).toString(),
         poolPoints: biopoolInfo.data.data.points,
         farmers: biopoolInfo.data.farmers.map(farmer => {

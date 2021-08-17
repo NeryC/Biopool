@@ -1,13 +1,13 @@
 {
-  "business-plan":"Plan Empresarial",
-  "business":"Empresa",
-  "representative":"Representante Legal",
-  "email":"Correo",
-  "phone":"Número móvil",
-  "space":"Espacio total de farmeo (por encima de 1 PB)",
-  "send":"Enviar",
-  "sended":"Enviado",
-  "success-message":"Sus datos se enviaron correctamente",
-  "error-message":"Ocurrio un error",
-  "duplicated-message":"Este email ya esta suscrito"
+  "data-sent":"Seus dados foram enviados corretamente",
+  "email-in-use":"Este e-mail já está inscrito",
+  "there-was-an-error":"Um erro ocorreu",
+  "business-plan":"Plano de negócios",
+  "business":"O negócio",
+  "legal-representative":"Representante Legal",
+  "email":"Correspondência",
+  "phone":"Numero de celular",
+  "space":"Espaço farming total (acima de 1 PB)",
+  "send":"Mandar",
+  "sent":"Enviado"
 }
