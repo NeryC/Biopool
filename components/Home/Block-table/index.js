@@ -39,7 +39,7 @@ const BlockTable = () => {
         "
       >
         <div className="flex flex-col">
-          <div className="text-green3 text-4xl md:text-4.5xl lg:text-3.5xl absolute">
+          <div className="text-green3 w-3/4 md:w-auto text-4xl md:text-4.5xl lg:text-3.5xl absolute">
             <span className="font-gibson-semiBold">{t('title1')}</span>{t('title2')}
           </div>
           <div>

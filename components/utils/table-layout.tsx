@@ -26,7 +26,7 @@ const TableLayout = (
   return (
     <div >
       {order &&
-        <div className="text-green3 text-sm hidden lg:flex justify-end pb-10">
+        <div className="text-green3 text-sm flex justify-end pb-10">
           <button className="border border-gray hover:bg-gray-400 p-3 h-11 hidden">
             <FontAwesomeIcon
               icon={faList}
@@ -47,7 +47,7 @@ const TableLayout = (
           {rows}
         </tbody>
       </table>
-      <div className="text-white text-sm  justify-end pt-3 lg:flex">
+      <div className="text-white text-sm  justify-end pt-3 flex">
         <button 
           className={`bg-gray2 py-3 px-4 mr-1 focus:outline-none focus:shadow-outline ${disableUPButton && 'bg-opacity-50'}`}
           onClick={()=>{handleChangePage(-1)}} 
